@@ -1,0 +1,25 @@
+.search {
+    width: 30vw;
+    height: 35px;
+    border-style: none;
+    outline: none;
+    border-radius: 20px;
+    background-color: rgb(241, 241, 245);
+    margin-left: 100px;
+    margin-right: 50px;
+}
+
+.search input {
+    /* border-style: none; */
+    width: 27vw;
+    margin: 8px 0px 2px 45px;
+    border-style: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.search-icon {
+    position: absolute;
+    top: 90px;
+    left: 660px;
+}
