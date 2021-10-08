@@ -7,13 +7,13 @@ import Navbar from './Navbar';
 import SearchBar from './SearchBar';
 
 
-const Header = () => {
+const Header = (props) => {
 
     return (
         <div>
             <div className='header'>
                 <h3>BEAUTYSTORE</h3>
-                <SearchBar />
+                <SearchBar data={props.data}/>
                 <ul>
                     <li>
                         <a href='#' className='sign h-icon'>
