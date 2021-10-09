@@ -27,22 +27,27 @@
 }
 
 .slider h1 {
-    margin-top: 40px;
+    margin-top: 35px;
 }
 
 .rec {
-    width: 56vw;
+    width: 60vw;
     overflow-x: scroll;
     scroll-behavior: smooth;
     margin: 0 auto;
     position: relative;
-    margin-top: 30px;
+    margin-top: 18px;
 }
 
 .rec::-webkit-scrollbar {
     width: 2px;
     display: none;
-  }
+}
+
+.slider-card h6 {
+    font-weight: bold;
+    margin-bottom: 0;
+}
 
   .slider-buttons {
     position: absolute;
@@ -51,7 +56,7 @@
 
   .btn-left {
     position: relative;
-    left: 19.5vw;
+    left: 18vw;
     font-size: 2.5rem;
     background-color: transparent;
     border-style: none;
@@ -60,9 +65,14 @@
 
   .btn-right {
     position: relative;
-    left: 76vw;
+    left: 78vw;
     font-size: 2.5rem;
     background-color: transparent;
     border-style: none;
     color: rgb(172, 170, 170);
+  }
+
+  .slider-list a {
+    color: black;
+    text-decoration: none;
   }

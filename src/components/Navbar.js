@@ -8,9 +8,10 @@ const Navbar = () => {
             <div className='navbar'>
                 <ul className='first-ul'>
                     <li>
-                        <a href='#'>
-                            BEST SELLERS
-                        </a>
+                        <a href='#'>NEW IN</a>
+                    </li>
+                    <li>
+                        <a href='#'>BEST SELLERS</a>
                     </li>
                     <li className='first-li'>
                         <a href='#'>BODY CARE</a>

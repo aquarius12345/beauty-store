@@ -1,15 +1,13 @@
 .banner {
     display: flex;
     justify-content: center;
-    position: relative;
-    
+    position: relative;  
 }
 
 .banner img {
     width: 30vw;
     height: 350px;
-    margin: 10px;
-    
+    margin: 10px;   
 }
 
 article {
@@ -22,21 +20,30 @@ article {
     color: white;
 }
 
-.banner #left {
+.banner-art #left {
     position: absolute;
     top: 280px;
     padding: 15px 40px;
-    left: 580px;
+    left: 30vw;
     border: 1px solid white;
     font-weight: bold;
 }
 
-.banner #right {
+.banner-art #left:hover {
+    background-color: rgba(238, 234, 234, 0.678);
+}
+
+.banner-art #right {
     position: absolute;
     top: 280px;
     padding: 15px 20px;
-    left: 1170px;
+    left: 61.5vw;
     color: orange;
     border: 1px solid orange;
     font-weight: bold;
 }
+
+.banner-art #right:hover {
+    background-color: rgba(243, 221, 124, 0.678);
+}
+

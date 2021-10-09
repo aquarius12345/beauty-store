@@ -29,14 +29,39 @@
     margin-bottom: 18px;
 }
 
-.signup button {
-    width: 8vw;
+#signup-btn {
+    width: 150px;
     height: 40px;
     margin: 0 auto;
     margin-top: 30px;
     color: white;
     background-color: black;
     font-size: 1rem;
-    box-shadow: 5px 7px 0px 0px pink, 5px 5px 15px 5px rgba(0,0,0,0);
+    border-style: none;
+    outline: none;
+    box-shadow: 6px 6px 0px pink;
 }
+
+#signup-btn:hover {
+    opacity: 0.5;
+}
+
+#login-btn {
+    width: 150px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 30px;
+    color: white;
+    background-color: black;
+    border-style: none;
+    outline: none;
+    font-size: 1rem;
+    box-shadow: 6px 6px 0px pink;
+}
+
+#login-btn:hover {
+    opacity: 0.5;
+}
+
+
 

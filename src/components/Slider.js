@@ -27,12 +27,14 @@ const Slider = (props) => {
             <div className='rec' ref={rec}>
                     <div className='slider-list'>
                         {newData.map(el => 
-                        <div className='slider-card' key={el._id}>
+                        <Link to="#" key={el._id}>
+                        <div className='slider-card'>
                             {props.spantext ? <p className='p'>{props.spantext}</p> : ''}
                             <img src={el.image_one} alt='product-img'/>
                             <h6>{el.brand}</h6>
                             <p>{el.name}</p>
-                        </div>)}
+                        </div>
+                        </Link>)}
                     </div>       
             </div>
             <div className='slider-buttons'>

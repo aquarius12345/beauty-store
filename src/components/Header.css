@@ -5,10 +5,11 @@
     height: 100px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     font-family: sans-serif;
     border-style: none;
     font-size: 1rem;
+    padding-top: 20px;
 }
 
 .header h3 {
@@ -17,15 +18,14 @@
 }
 
 .header ul {
-    width: 10vw;
+    width: 17vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .header li {
-    list-style: none;
-    
+    list-style: none;  
 }
 
 .sign {

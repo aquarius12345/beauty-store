@@ -6,8 +6,7 @@ import Header from './components/Header';
 import Today from './components/Today';
 import Home from './views/Home';
 import Signup from './views/Signup';
-
-
+import Logout from './views/Logout';
 
 function App() {
 
@@ -18,6 +17,7 @@ function App() {
       <Switch>
         <Route exact path='/' component= {Home} />
         <Route exact path='/signup' component= {Signup} />
+        <Route exact path='/logout'component={Logout} />
       </Switch>
     </div>
   );

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
 import { BsPersonCircle } from 'react-icons/bs';
@@ -9,6 +9,9 @@ import SearchBar from './SearchBar';
 
 
 const Header = (props) => {
+    
+    const [user, setUser] = useState(localStorage.getItem('userName'));
+
 
     return (
         <div>
@@ -16,11 +19,9 @@ const Header = (props) => {
                 <h3><Link to='/'>BEAUTYSTORE</Link></h3>
                 <SearchBar data={props.data}/>
                 <ul>
-                    <li>
-                        <Link to='/signup' className='sign h-icon'>
-                            <BsPersonCircle size='20' />
-                            <p className='h-icon'>Sign In</p>
-                        </Link>
+                    <li className='sign h-icon'>
+                        <BsPersonCircle size='20' />
+                         {user ? <p>Hello, {user}!</p> : <Link to='/signup' className='sign h-icon'><p className='h-icon'>Sign In</p></Link>}
                     </li>
                     <li>
                         <Link to='#'>
@@ -32,6 +33,7 @@ const Header = (props) => {
                             <BsHandbag size='23' className='h-icon'/>
                         </a>
                     </li>
+                    <li>{user && <Link to='/logout' className='h-icon'>Logout</Link>}</li>
                 </ul>
             </div>
             <Navbar />
