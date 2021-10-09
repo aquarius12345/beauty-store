@@ -25,6 +25,7 @@
 
 .header li {
     list-style: none;
+    
 }
 
 .sign {
@@ -34,6 +35,7 @@
 
 .sign p {
     margin-left: 5px;
+    margin-top: 15px;
 }
 
 .header a {

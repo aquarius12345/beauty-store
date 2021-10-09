@@ -43,10 +43,9 @@ const SearchBar = () => {
                 <AiOutlineSearch size='22' className='search-icon'/>
                 <input type='search' value={inputValue} placeholder='Search' onChange={handleChange}/> 
                 <ul>
-                {inputValue != '' ? filteredList.slice(0, 7).map(el => <li key={el._id}><a href='3'>{el.name}</a></li>): null}
+                {inputValue !== '' ? filteredList.slice(0, 7).map(el => <li key={el._id}><a href='3'>{el.name}</a></li>): null}
                 </ul>
-            </div>
-           
+            </div>  
         </div>
     
     );

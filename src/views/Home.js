@@ -1,32 +1,55 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import Caroussel from '../components/Caroussel';
+import Slider from '../components/Slider';
 import api from '../configs/api';
+import './Home.css';
 
 
 const Home = () => {
-    // const [products, setProducts] = useState([]);
+    const [products, setProducts] = useState([]);
 
-    // useEffect(() => {
-    //     getProducts();
-    // }, []);
+    useEffect(() => {
+        getProducts();
+    }, []);
 
-    // const getProducts = async() => {
-    //     try {
-    //         const result = await api.get('/product/all');
-    //         console.log('result', result);
-    //         setProducts(result.data);
-    //     } catch(error) {
-    //         console.error(error.response);
-    //     }
-    // }
+    const getProducts = async() => {
+        try {
+            const result = await api.get('/product/all');
+            console.log('result', result);
+            setProducts(result.data);
+        } catch(error) {
+            console.error(error.response);
+        }
+    }
 
-    // return (
-    //     <div>
-    //         <ul>
-    //             {products.map(el => <li>{el.name}</li>)}
-    //         </ul>
-    //     </div>
-    // );
+    const bestSell = products.filter(el => el.rating >= 4).slice(30, 50);
+
+    const choosen = products.filter(el => el.rating == 4);
+
+    // const diorColl = products.filter(el => el.brand === 'Dior');
+    // console.log('dior', diorColl);
+
+    return (
+        <div>
+           <Caroussel/>
+           <Slider data={products} title={'New In'} spantext={'NEW'}/>
+           <div className='banner'>
+               <article>
+                <img src="https://forwardpositive.com/wp-content/uploads/2020/08/fall-2020_laneige-gummy-bear_000_promo-660x330.jpg" alt='laneige'/>
+                <Link to="#" id="left">SHOP ALL</Link>
+               </article>
+               <article>
+                <img src="https://bestkbeauty.com/wp-content/uploads/2020/11/dr-jart-ceramidin-review.jpg" alt="ceramidin"/>
+                <Link to="#" id="right">BEST SELLERS</Link>
+               </article>
+           </div>
+           <Slider data={bestSell} title={'Selling Fast'}/>
+           <Slider data={choosen} title={'Choosen for you'}/>
+           {/* <Slider data={diorColl} title={'See Collection'}/> */}
+        </div>
+    );
 };
 
 export default Home;

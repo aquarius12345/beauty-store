@@ -1,0 +1,42 @@
+.signup {
+    /* background-image: url("https://i.pinimg.com/originals/f7/86/33/f78633fc96f13c93f387aec403bb805e.jpg"); */
+    background-image: url('https://cdn.shopify.com/s/files/1/1143/5434/products/KissMyAss_RedonWhite_Product_forweb_2099d23c-b7e9-4fcf-8ce0-0ae8c321b80f.jpg?v=1615485133');
+    height: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 50px;
+    font-size: 0.8rem;
+}
+
+.signup h1 {
+    margin: 50px;
+}
+
+.signup form {
+    width: 40vw;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+  
+}
+
+.signup input {
+    width: 20vw;
+    height: 35px;
+    margin: 0 auto;
+    margin-bottom: 18px;
+}
+
+.signup button {
+    width: 8vw;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 30px;
+    color: white;
+    background-color: black;
+    font-size: 1rem;
+    box-shadow: 5px 7px 0px 0px pink, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+

@@ -1,0 +1,15 @@
+.caroussel {
+    width: 65vw;
+    margin: 0 auto;
+}
+
+.caroussel img {
+   height: 580px; 
+}
+
+.caroussel-btn {
+    color: black;
+    font-size: 1.2em;
+}
+
+
