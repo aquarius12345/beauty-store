@@ -6,7 +6,7 @@ const Today = () => {
     return (
         <div>
             <div className= "today-bg">
-                <span>Get up to 50% off selected products. Plus, Free shipping!</span>
+                <span>Get up to 50% off on selected products. Plus, Free shipping!</span>
                 <span><ImTruck color='white' margin-top='5px' size='20'/></span>
             </div>
         </div>

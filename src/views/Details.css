@@ -1,0 +1,68 @@
+.details {
+    margin: 0 15vw;
+    display: flex;
+    flex-direction: column;
+    /* background-color: aliceblue; */
+};
+
+.details img {
+    width: 20vw;
+}
+
+.det-container {
+    display: flex;
+    margin-top: 50px;
+}
+
+.description {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin-left: 100px; 
+    /* background-color: rgb(248, 226, 233); */
+}
+
+.description h3 {
+    font-weight: bold;
+}
+
+.description input {
+    width: 70px;
+}
+
+.description button {
+    width: 200px;
+    height: 40px;
+    border-style: none;
+    outline: none;
+    margin: 0 auto;
+    margin-top: 50px;
+    color: white;
+    background-color: black;
+    box-shadow: 6px 6px 0px pink;
+}
+
+.description button:hover {
+    opacity: 0.6;
+}
+
+.highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 100px 10px;
+}
+
+.highlights li {
+    list-style: none;
+}
+
+.highlights img {
+    width: 60px;
+}
+
+.high {
+    text-align: start;
+}
+

@@ -1,0 +1,77 @@
+.review {
+    text-align: start;
+    position: relative;
+}
+
+.review-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.review-container li {
+    list-style: none;
+    height: 150px;
+    text-align: center;
+}
+
+.review button {
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    border-style: none;
+    outline: none;
+    color: white
+}
+
+.review button:hover {
+    opacity: 0.5;
+}
+
+h4 {
+    font-weight: bold;
+}
+
+.review article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+}
+
+.m {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: black;
+    background-color: pink;
+    height: 500px;
+    width: 30vw;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 700;
+    position: absolute;
+    top: 0;
+    margin-left: 300px;
+    margin-bottom:  800px;
+}
+
+.m textarea {
+    width: 80%;
+    height: 100px;
+}
+
+.m button {
+    margin: 0 auto;
+}
+
+#close-btn {
+    background-color: transparent;
+    color: black;
+    text-align: end;
+    width: 100%;
+}
+
+.dark {
+    width: 100%;
+    background-color: rgba(117, 116, 116, 0.493);
+}

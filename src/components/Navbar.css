@@ -43,7 +43,8 @@
 
 .first-li:hover .inside {
     opacity: 1;
-    visibility: visible;   
+    visibility: visible;
+    /* z-index: 550;    */
 }
 
 .inside li {

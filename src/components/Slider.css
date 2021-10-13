@@ -57,7 +57,7 @@
   .btn-left {
     position: relative;
     left: 18vw;
-    font-size: 2.5rem;
+    font-size: 2rem;
     background-color: transparent;
     border-style: none;
     color: rgb(172, 170, 170);
@@ -66,7 +66,7 @@
   .btn-right {
     position: relative;
     left: 78vw;
-    font-size: 2.5rem;
+    font-size: 2rem;
     background-color: transparent;
     border-style: none;
     color: rgb(172, 170, 170);

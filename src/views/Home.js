@@ -17,7 +17,7 @@ const Home = () => {
     const getProducts = async() => {
         try {
             const result = await api.get('/product/all');
-            console.log('result', result);
+            //console.log('result', result);
             setProducts(result.data);
         } catch(error) {
             console.error(error.response);

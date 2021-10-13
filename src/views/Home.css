@@ -6,7 +6,7 @@
 
 .banner img {
     width: 30vw;
-    height: 350px;
+    height: 300px;
     margin: 10px;   
 }
 
@@ -22,7 +22,7 @@ article {
 
 .banner-art #left {
     position: absolute;
-    top: 280px;
+    top: 220px;
     padding: 15px 40px;
     left: 30vw;
     border: 1px solid white;
@@ -35,7 +35,7 @@ article {
 
 .banner-art #right {
     position: absolute;
-    top: 280px;
+    top: 220px;
     padding: 15px 20px;
     left: 61.5vw;
     color: orange;

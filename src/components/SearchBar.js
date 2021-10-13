@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './SearchBar.css';
 import { useState, useEffect } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
@@ -43,7 +44,10 @@ const SearchBar = () => {
                 <AiOutlineSearch size='22' className='search-icon'/>
                 <input type='search' value={inputValue} placeholder='Search' onChange={handleChange}/> 
                 <ul>
-                {inputValue !== '' ? filteredList.slice(0, 7).map(el => <li key={el._id}><a href='3'>{el.name}</a></li>): null}
+                {inputValue !== '' ? filteredList.slice(0, 7).map(el => 
+                <li key={el._id}>
+                    <Link to={`/product-detail/${el._id}`}>{el.name}</Link>
+                </li>): null}
                 </ul>
             </div>  
         </div>
