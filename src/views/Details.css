@@ -2,7 +2,6 @@
     margin: 0 15vw;
     display: flex;
     flex-direction: column;
-    /* background-color: aliceblue; */
 };
 
 .details img {
@@ -65,4 +64,41 @@
 .high {
     text-align: start;
 }
+
+/* modal
+.m {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: black;
+    background-color: pink;
+    height: 700px;
+    width: 22vw;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 900;
+    position: absolute;
+    top: 10;      
+}
+
+.m textarea {
+    width: 80%;
+    height: 100px;
+}
+
+.m button {
+    margin: 0 auto;
+}
+
+#close-btn {
+    background-color: transparent;
+    color: black;
+    text-align: end;
+    width: 100%;
+} */
+
+/* .dark {
+    width: 100%;
+    background-color: rgba(117, 116, 116, 0.493);
+} */
 

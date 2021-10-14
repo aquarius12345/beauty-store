@@ -1,0 +1,54 @@
+.page-margin {
+    display: flex;
+    margin: 0 10vw;
+    /* background-color: hotpink; */
+}
+
+.filter-list {
+    width: 15vw;
+    margin-top: 50px;
+    /* background-color: khaki;     */
+}
+
+.filter-list h2 {
+    margin-bottom: 50px;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-list  li {
+    list-style: none;
+    text-decoration: none;
+}
+
+.filter a {
+    text-decoration: none;
+    color: black;
+}
+
+.filter-list button {
+    background-color: transparent;
+    border-style: none;
+}
+
+.filter-list h6 {
+    margin: 50px 0;
+}
+
+.list a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.filter-list ul {
+    text-align: start;
+}
+
+#bodycare-link {
+    font-size: 1.5rem;
+    font-weight: bold;
+}

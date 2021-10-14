@@ -41,18 +41,18 @@ h4 {
 .m {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     color: black;
-    background-color: pink;
-    height: 500px;
+    height: 700px;
     width: 30vw;
-    padding: 15px;
+    padding: 0px 20px 80px;
     border-radius: 5px;
     z-index: 700;
     position: absolute;
     top: 0;
-    margin-left: 300px;
-    margin-bottom:  800px;
+    margin-left: 60%;
+    margin-top: -620px;
+    background-color: white;    
 }
 
 .m textarea {
@@ -68,10 +68,41 @@ h4 {
     background-color: transparent;
     color: black;
     text-align: end;
-    width: 100%;
+    width: 98%;
 }
 
 .dark {
-    width: 100%;
-    background-color: rgba(117, 116, 116, 0.493);
+    width: 105vw;
+    height: 1380px;
+    display: flex;
+    background-color: rgba(117, 116, 116, 0.5);
+    margin-top: -1350px;
+    margin-left: -300px;
+    padding-top: 700px;
+}
+
+.go-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    height: 40%;
+    width: 25vw;
+    z-index: 810;
+    top: 100;
+    margin: 0 auto;
+    padding-top: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.go-login a {
+    width: 150px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    background-color: black;
+    padding: 15px 40px;
+    margin: 0 auto;
+    margin-bottom: 40px;
 }

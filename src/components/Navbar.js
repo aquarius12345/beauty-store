@@ -24,7 +24,7 @@ const Navbar = () => {
                         </ul>
                     </li>
                     <li className='first-li'>
-                        <a href='#'>FACE CARE</a>
+                        <Link to='/face-care'>FACE CARE</Link>
                         <ul className='inside'>
                             <li><a href='#'>Best Sellers</a></li>
                             <li><a href='#'>Serums</a></li>

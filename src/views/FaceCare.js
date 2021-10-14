@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import api from '../configs/api';
-import './BodyCare.css';
+import './FaceCare.css';
 import BodyFace from '../components/BodyFace';
 
 
@@ -15,7 +15,7 @@ function useQuery() {
     return new URLSearchParams(useLocation().search);
 }
 
-const BodyCare = () => {
+const FaceCare = () => {
 
     let query = useQuery();
     //console.log(query)
@@ -52,7 +52,7 @@ const BodyCare = () => {
         <div className='page-margin'>
             <section className='filter'>
                 <ul className='filter-list'>
-                    <Link to='/bodycare' id='bodycare-link'>Body Care</Link>
+                    <Link to='/bodycare' id='bodycare-link'>Face Care</Link>
                     <h6>Filters</h6>
                     <li>
                         <div className='list'>
@@ -61,10 +61,10 @@ const BodyCare = () => {
                         </div>
                         {!button.btnOne ? '' : 
                             <ul>
-                                <li><Link to='/bodycare?name=oily'>Oily</Link></li>
-                                <li><Link to='/bodycare?name=dry'>Dry</Link></li>
-                                <li><Link to='/bodycare?name=sensitive'>Sensitive</Link></li>
-                                <li><Link to='/bodycare?name=all'>Normal</Link></li>
+                                <li><Link to='/face-care?name=oily'>Oily</Link></li>
+                                <li><Link to='/face-care?name=dry'>Dry</Link></li>
+                                <li><Link to='/face-care?name=sensitive'>Sensitive</Link></li>
+                                <li><Link to='/face-care?name=all'>Normal</Link></li>
                             </ul>
                         }    
                     </li>
@@ -77,7 +77,7 @@ const BodyCare = () => {
                         </div>
                         {!button.btnTwo ? '' : 
                             <ul>
-                            {byBrand.map(el =><li><Link to={`/bodycare?brand=${el}`}>{el}</Link></li>)}
+                            {byBrand.map(el =><li><Link to={`/face-care?brand=${el}`}>{el}</Link></li>)}
                             </ul>
                         }
                     </li>
@@ -101,12 +101,12 @@ const BodyCare = () => {
                 </ul>
             </section>
 
-            <BodyFace name={query.get('name')} brand={query.get('brand')} category='body'/>
+            <BodyFace name={query.get('name')} brand={query.get('brand')} category='face'/>
         </div>
     );
 };
 
-export default BodyCare;
+export default FaceCare;
 
 
 
