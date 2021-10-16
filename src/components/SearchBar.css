@@ -9,17 +9,20 @@
     margin-right: 50px;
     cursor: pointer;
     position: relative;
-    z-index: 100;
+    z-index: 610;
 }
 
 .search input {
-    /* border-style: none; */
     width: 83%;
     margin: 8px 0px 0px 40px;
     border-style: none;
     outline: none;
     background-color: transparent;
     font-size: 1rem;
+}
+
+.search img {
+    width: 25px;
 }
 
 .search-icon {

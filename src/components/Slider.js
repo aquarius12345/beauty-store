@@ -1,6 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Slider.css';
+import { BsChevronCompactRight, BsChevronCompactLeft } from 'react-icons/bs';
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 
 const Slider = (props) => {
@@ -40,8 +42,8 @@ const Slider = (props) => {
                     </div>       
             </div>
             <div className='slider-buttons'>
-                <button className='btn-left' onClick={handleLeftClick}>{'<'}</button>
-                <button className='btn-right' onClick={handleRightClick}>{'>'}</button>
+                <button className='btn-left' onClick={handleLeftClick}><FiChevronLeft/></button>
+                <button className='btn-right' onClick={handleRightClick}><FiChevronRight/></button>
             </div>
         </div>
     );

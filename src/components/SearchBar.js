@@ -32,8 +32,7 @@ const SearchBar = () => {
 
     useEffect(() => {
         const filtered = products.filter(el => el.name.toLowerCase().includes(inputValue.toLowerCase()));
-        
-        console.log('filtered', filtered);
+        //console.log('filtered', filtered);
         setFilteredList(filtered);
     }, [inputValue]);
 
@@ -46,12 +45,12 @@ const SearchBar = () => {
                 <ul>
                 {inputValue !== '' ? filteredList.slice(0, 7).map(el => 
                 <li key={el._id}>
-                    <Link to={`/product-detail/${el._id}`}>{el.name}</Link>
+                    <img src={el.image_one} alt='product'/>
+                    <Link to={`/product-detail/${el._id}`}>{el.name.slice(0, 40)}...</Link>
                 </li>): null}
                 </ul>
             </div>  
         </div>
-    
     );
 };
 

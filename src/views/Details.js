@@ -7,24 +7,25 @@ import Review from '../components/Review';
 const Details = (props) => {
     console.log('details', props)
     const [product, setProduct] = useState({});
-    const [inputValue, setInputValue] =useState('');
-    // const [mod, setMod] = useState(false);
-    //console.log('mod', mod)
-
+    const [qty, setQty] = useState('');
+    //console.log('qty value', typeof inputValue)
+    const [toggleImg, setToggleImg] = useState(false);
+    
     useEffect(() => {
         oneProduct();
+
     }, [])
 
     const oneProduct = async() => {
         const result = await api.get(`/product/${props.match.params.id}`);
-        console.log('result one', result.data)
-
+        console.log('result oneProduct', result.data)
         setProduct(result.data);
     }
 
     useEffect(() => {
        oneProduct();
-    }, [props.match.params.id])
+       console.log('oneProduct no useEffect2', product)
+    }, [props.match.params.id, qty])
     
 
     const heart = '♥';
@@ -35,20 +36,36 @@ const Details = (props) => {
     }
 
     const handleInput = (e) => {
-        // e.preventDefault();
-        setInputValue(e.target.value);
+        e.preventDefault();
+        setQty(e.target.value);
     }
 
-    // const toggle = () => {
-    //     setMod(!mod);
-    // };
+    const addToCart = async(el) => {
+        try {
+            const result = await api.post(`/cart/${el}`,{qty});
+            console.log('add to cart', result)
+            oneProduct();
+        }catch(error){
+            console.error(error);
+        }
+    }
 
     return (
     
         <div className='details'>
-        
+        {product.name ? <>
            <div className='det-container'>
+               <div className='btn-container'>
+                   <button onClick={() => setToggleImg(false)}> <img src={product.image_one} alt={product.name}/></button>
+                   <button onClick={() => setToggleImg(true)}><img src={product.image_two} alt="second-image"/></button>
+               </div>
+               {!toggleImg ?
+                
                <img src={product.image_one} alt={product.name}/>
+               :
+               <img src={product.image_two} alt="second-image"/>
+                }
+               
                <div className='description'>
                     <h3>{product.brand}</h3>
                     <h6>{product.name}</h6>
@@ -59,7 +76,7 @@ const Details = (props) => {
                     <p style={{fontWeight:'bold'}}>Size: {product.size}</p>
                     <span style={{fontSize: '0.9rem'}}>Qty:</span>
                     <input type='number' onChange={handleInput}></input>
-                    <button>ADD TO BAG</button>
+                    <button onClick={()=>addToCart(product._id)}>ADD TO BAG</button>
                </div>   
            </div>
 
@@ -74,7 +91,7 @@ const Details = (props) => {
                             <li>
                             { product.ingredients.includes('Vegan') ? (
                                 <> 
-                                    <img src='https://cdn-icons-png.flaticon.com/128/1971/1971034.png' alt='vegan'/>
+                                    <img src='https://res.cloudinary.com/dgzbojudn/image/upload/v1634241913/beautyStore/3901573_nirqxb.png' alt='vegan'/>
                                     <span> Vegan</span>
                                 </>) : ''}   
                             </li>   
@@ -83,7 +100,7 @@ const Details = (props) => {
                             { product.ingredients.includes('Parabens') ? (
             
                                 <>
-                                  <img src='https://cdn-icons-png.flaticon.com/128/3637/3637654.png' alt='paraben free'/>
+                                  <img src='https://res.cloudinary.com/dgzbojudn/image/upload/v1634241913/beautyStore/3637654_wizijw.png' alt='paraben free'/>
                                   <span> Paraben Free</span> 
                                 </>) : '' }
                             </li> 
@@ -91,7 +108,7 @@ const Details = (props) => {
                             <li>
                             { product.ingredients.includes('Redness') ? (
                                 <>
-                                  <img src='https://cdn-icons.flaticon.com/png/512/3464/premium/3464702.png?token=exp=1633987496~hmac=3dfe629ed3eb1db6937e384925857236' alt='redness'/>
+                                  <img src='https://res.cloudinary.com/dgzbojudn/image/upload/v1634241914/beautyStore/4771256_cnzxhv.png' alt='redness'/>
                                   <span> Redness</span>
                                 </>) : '' }
                             </li>
@@ -99,23 +116,16 @@ const Details = (props) => {
                             <li>
                             { product.ingredients.includes('Cruelty') ? (
                                 <>
-                                    <img src='https://cdn-icons-png.flaticon.com/128/4807/4807799.png' alt='cruelty free' />
+                                    <img src='https://res.cloudinary.com/dgzbojudn/image/upload/v1634241914/beautyStore/4807799_ehdv9u.png' alt='cruelty free' />
                                     <span> Cruelty Free</span>
                                 </>) : '' }
                             </li>
 
-                            <li>
-                            { product.ingredients.includes('Cruelty') ? (
-                                <>    
-                                    <img src='https://cdn-icons.flaticon.com/png/128/3274/premium/3274120.png?token=exp=1633987886~hmac=120e3d37b6db0266258a677ef63a8ad1' alt='oil free' />
-                                    <span> Oil Free</span>
-                                </>) : '' }
-                            </li>
 
                             <li>
                             { product.ingredients.includes('Sili') ? (
                                 <>
-                                <img src='https://cdn-icons-png.flaticon.com/512/4406/4406262.png' alt='silicone free'/>
+                                <img src='https://res.cloudinary.com/dgzbojudn/image/upload/v1634241913/beautyStore/3901485_rpri91.png' alt='silicone free'/>
                                 <span> Silicone Free</span>
                                 </>) : '' }
                             </li>
@@ -123,14 +133,13 @@ const Details = (props) => {
                             <li>
                             { product.ingredients.includes('Sali') ? (
                                 <>
-                                <img src='https://cdn-icons.flaticon.com/png/512/4043/premium/4043542.png?token=exp=1633988159~hmac=853006d5f10a6fda36088dbe4734a700' alt='salicylic acid'/>
+                                <img src='https://res.cloudinary.com/dgzbojudn/image/upload/v1634241914/beautyStore/salycilic_ivodnl.png' alt='salicylic acid'/>
                                 <span> Salicylic Acid</span>
                                 </>) : '' }
                             </li>
                             </>
                         }
-                        </ul>
-                      
+                        </ul>  
                     </div>
             </div>
 
@@ -156,7 +165,7 @@ const Details = (props) => {
                     )}          
                 </div> 
             </div> */}
-                       
+         </>  : '' }           
         </div>
     );
 };

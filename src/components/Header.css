@@ -18,7 +18,7 @@
 }
 
 .header ul {
-    width: 17vw;
+    width: 350px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,4 +50,73 @@
 .h-icon:hover{
     /* color: rgb(255, 0, 140); */
     color: pink;
+}
+
+.cart-menu {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 26vw;
+    position: absolute;
+    top: 0;
+    margin-top: 120px;
+    margin-left: 67vw;
+    z-index: 930;
+    border-radius: 10px;
+    box-shadow: 0 0 0.3em rgb(144, 150, 156);
+    font-size: 0.8rem;
+    background-color: white;
+}
+
+.cart-menu img {
+    width: 50px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.cart-menu li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+.remove-btn {
+    margin-left: 90%;
+    color:blue;
+    background-color: transparent;
+    border: 1px solid blue;
+}
+
+.cart-menu h5 {
+    margin-top: 20px;
+}
+
+.header .bag-qty {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-weight: bolder;
+    border-style: none;
+    background-color: red;
+    color: white;
+    position: absolute;
+    margin-left: -9px;
+}
+
+.checkout-btn {
+    width: 190px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border-color: transparent;
+    margin-left: 90px;
+}
+
+.cart-menu a {
+    color: black;
+    text-decoration: black;
 }

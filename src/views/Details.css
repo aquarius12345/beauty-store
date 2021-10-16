@@ -2,6 +2,7 @@
     margin: 0 15vw;
     display: flex;
     flex-direction: column;
+    
 };
 
 .details img {
@@ -36,7 +37,8 @@
     border-style: none;
     outline: none;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     color: white;
     background-color: black;
     box-shadow: 6px 6px 0px pink;
@@ -50,7 +52,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin: 100px 10px;
+    margin: 90px 10px;
 }
 
 .highlights li {
@@ -63,6 +65,26 @@
 
 .high {
     text-align: start;
+}
+
+.btn-container img {
+    width: 60px;
+    height: 60px;
+    border-radius: 60%;
+    border: 1px solid rgb(173, 170, 170);
+    object-fit: cover;   
+}
+
+.btn-container img:hover {
+    border: 3px solid pink;
+}
+
+.btn-container button {
+    border-radius: 60%;
+    background-color: transparent;
+    border-style: none;
+    outline: none;
+    margin-top: 30px;
 }
 
 /* modal

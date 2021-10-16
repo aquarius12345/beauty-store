@@ -11,20 +11,22 @@ const initialState = {
     btnThree: false
 }
 
-function useQuery() {
-    return new URLSearchParams(useLocation().search);
-}
+// function useQuery() {
+//     return new URLSearchParams(useLocation().search);
+// }
 
 const BodyCare = () => {
 
-    let query = useQuery();
-    //console.log(query)
+    // let query = useQuery();
+    // //console.log(query)
 
-    const location = useLocation();
-    console.log('useLocation', location)
+    // const location = useLocation();
+    // console.log('useLocation', location)
 
     const [products, setProducts] = useState([]);
     const [button, setButton] = useState(initialState);
+    const [checked, setChecked] = useState(null);
+    console.log('checked', checked)
     
     useEffect(() => {
         getProducts();
@@ -49,6 +51,7 @@ const BodyCare = () => {
 
 
     return (
+        // rendering Filters
         <div className='page-margin'>
             <section className='filter'>
                 <ul className='filter-list'>
@@ -83,25 +86,38 @@ const BodyCare = () => {
                     </li>
                     <hr/>
 
-                    {/* <li>
+                    <li>
                         <div className='list'>
-                            <Link to="#"> By Price</Link>
+                            <Link to="#"> By Rating</Link>
                             <button onClick={() => handleButton('btnThree', button.btnThree)}>+</button>
                         </div>
                         {!button.btnThree ? '' : 
-                            <ul>
-                            <li>Oily</li>
-                            <li>Dry</li>
-                            <li>Sensitive</li>
-                            <li>Normal</li>
+                        <ul className='rating-check'>
+                            <li>
+                                <input type='radio' name='rating' value='5' onChange={(e) => setChecked(e.target.value)}/>
+                                <span> ♥♥♥♥♥ 5.0</span>
+                            </li>
+                            <li>
+                                <input type='radio' name='rating' value='4' onChange={(e) => setChecked(e.target.value)}/>
+                                <span> ♥♥♥♥♡ 4.0</span>
+                            </li>
+                            <li>
+                                <input type='radio' name='rating' value='3' onChange={(e) => setChecked(e.target.value)}/>
+                                <span> ♥♥♥♡♡ 3.0</span>
+                            </li>
+                            <li>
+                                <input type='radio' name='rating' value={null} onChange={(e) => setChecked(e.target.value)}/>
+                                <span> All Ratings</span>
+                            </li>
                         </ul>
                         }
-                    </li> */}
-                    {/* <hr/> */}
+                    </li>
+                    <hr/>
+
                 </ul>
             </section>
 
-            <BodyFace name={query.get('name')} brand={query.get('brand')} category='body'/>
+            <BodyFace  category='body' radio={checked}/>
         </div>
     );
 };

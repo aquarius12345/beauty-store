@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import api from '../configs/api';
 import './Review.css';
 import { CgGirl } from 'react-icons/cg';
+import { RiCloseFill } from 'react-icons/ri';
 
 
 const Review = (props) => {
@@ -22,7 +23,7 @@ const Review = (props) => {
     const getReviews = async() => {
         try {
             const result = await api.get(`/review/${props.id}`);
-            //console.log('review result', result.data);
+            console.log('review result', result.data);
             setReviewsList(result.data);
         } catch(error) {
             console.error(error);
@@ -45,7 +46,8 @@ const Review = (props) => {
             const result = await api.post(`/review/${props.id}`, { review });
             console.log('review submit', review);
             setReview('');
-            // getReviews();
+            getReviews();
+            setMod(false);
         } catch(error) {
             console.error(error.response);
         }
@@ -76,7 +78,7 @@ const Review = (props) => {
                     {token ? (<>
                         
                         <form className='m' onSubmit={handleSubmit}>
-                            <button id='close-btn' onClick={toggle}>X</button>
+                            <button id='close-btn' onClick={toggle}><RiCloseFill/></button>
                             
                             <h5 style={{fontWeight: 'bold'}}>Please share your experience</h5>
                             <p>Your feedback will help other shoppers make good choices, and we'll use it to improve our products.</p>
@@ -90,7 +92,7 @@ const Review = (props) => {
                             
                         </form></>) : (<>
                         <div className='go-login'>
-                        <button id='close-btn' onClick={toggle}>X</button>
+                        <button id='close-btn' onClick={toggle}><RiCloseFill/></button>
                         <h5>Please login to write a review.</h5>
                         <Link to='/signup'>Login</Link>
                     </div>

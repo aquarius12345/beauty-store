@@ -13,8 +13,7 @@ const Caroussel = () => {
                         <img
                         className="d-block w-100"
                         id="first-slide"
-                        src="https://1.bp.blogspot.com/-k52s9yHwyuc/Wso0WjoSLgI/AAAAAAAAZZE/pfRxRFVSm6EaM9DMDdOKKKKSiVj_7Xo8ACEwYBhgL/s1600/DiorCaptureYouth_5.jpg"
-                        alt="First slide"
+                        src="https://res.cloudinary.com/dgzbojudn/image/upload/v1634313454/beautyStore/capture-youth5_1440_1200_zmxhoj.webp"
                         />
                         <Carousel.Caption>
                         <Link to="#" className='caroussel-btn'>SHOP ALL</Link>
@@ -24,7 +23,7 @@ const Caroussel = () => {
                         <img
                         className="d-block w-100"
                         id="caroussel"
-                        src="https://www.dior.com/beauty/version-5.1432748112001/resize-image/ep/0/0/90/0/Alternate_views%252Frange_board_serums_V3.jpg"
+                        src="https://res.cloudinary.com/dgzbojudn/image/upload/v1634313455/beautyStore/hydralife-p-1-duo-europe-mood-franch-claim-en-1440-x-616_wnedsj.webp"
                         alt="Second slide"
                         />
 
@@ -36,7 +35,7 @@ const Caroussel = () => {
                         <img
                         className="d-block w-100"
                         id="caroussel"
-                        src="https://www.dior.com/couture/var/dior/storage/images/14216800/80-int-EN/capture-youth5_1440_1200.jpg"
+                        src="https://www.moodiedavittreport.com/wp-content/uploads/2021/06/Screenshot-2021-06-09-at-10.32.49.png"
                         alt="Third slide"
                         />
 

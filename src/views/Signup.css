@@ -1,12 +1,13 @@
 .signup {
     /* background-image: url("https://i.pinimg.com/originals/f7/86/33/f78633fc96f13c93f387aec403bb805e.jpg"); */
-    background-image: url('https://cdn.shopify.com/s/files/1/1143/5434/products/KissMyAss_RedonWhite_Product_forweb_2099d23c-b7e9-4fcf-8ce0-0ae8c321b80f.jpg?v=1615485133');
-    height: 700px;
+    background-image: url('https://image.freepik.com/vetores-gratis/design-de-papel-de-parede-rosa-redondo-sem-costura-padrao_53876-118674.jpg');
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     padding-top: 50px;
     font-size: 0.8rem;
+    height: 90vh;
+    /* background-size: cover; */
 }
 
 .signup h1 {
@@ -18,8 +19,7 @@
     height: 500px;
     display: flex;
     flex-direction: column;
-    background-color: white;
-  
+    background-color: white; 
 }
 
 .signup input {
