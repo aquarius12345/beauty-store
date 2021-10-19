@@ -32,6 +32,7 @@ const SearchBar = () => {
 
     useEffect(() => {
         const filtered = products.filter(el => el.name.toLowerCase().includes(inputValue.toLowerCase()));
+        // const filtered = products.filter(el => (el.name.toLowerCase() || el.brand.toLowerCase()).includes(inputValue.toLowerCase()));
         //console.log('filtered', filtered);
         setFilteredList(filtered);
     }, [inputValue]);

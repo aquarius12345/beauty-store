@@ -9,7 +9,7 @@ const Navbar = () => {
             <div className='navbar'>
                 <ul className='first-ul'>
                     <li className='no-inside'>
-                        <a href='#'>NEW IN</a>
+                        <a href='#'>SHOP ALL</a>
                     </li>
                     <li className='no-inside'>
                         <a href='#'>BEST SELLERS</a>
@@ -33,7 +33,7 @@ const Navbar = () => {
                         </ul>
                     </li>
                     <li className='no-inside'>
-                        <a href='#'>SHOP ALL</a>  
+                        <a href='#'>ABOUT</a>  
                     </li>
                 </ul>
             </div>

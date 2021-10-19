@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { BsPersonCircle } from 'react-icons/bs';
 import { HiOutlineHeart } from 'react-icons/hi';
 import { BsHandbag } from 'react-icons/bs';
-import { RiCloseFill } from 'react-icons/ri';
+import { GrFormClose } from 'react-icons/gr';
 import Navbar from './Navbar';
 import SearchBar from './SearchBar';
 import api from '../configs/api';
@@ -13,29 +13,28 @@ import api from '../configs/api';
 const Header = (props) => {
     
     const [user, setUser] = useState(localStorage.getItem('userName'));
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useState([]);
+    const [cartToggle, setCartToggle] = useState(false);
+    console.log('cart toggle', cartToggle)
 
-    console.log('cart',cart)
+    console.log('cart in header', cart)
 
     useEffect(() => {
-        getCart();    
-    }, [])
+        setCart(props.cartData);   
+    }, [props.cartData])
 
-    const getCart = async() => {
-       try {
-           const result = await api.get('/cart');
-           //console.log('cart',result.data.products);
-           setCart(result.data.products);
-       } catch(error) {
+    const handletoggle = () => {
+        setCartToggle(!cartToggle);
+    }
+
+    const removeProduct = async(id) => {
+        try {
+            await api.delete(`/cart/${id}`);
+            props.getCart();
+        }catch(error){
             console.error(error);
-       }
+        }
     };
-
-    // const removeProduct = async() => {
-    //     try {
-    //         const result = await api.delete('/cart/')
-    //     }
-    // }
 
     return (
         <div>
@@ -52,13 +51,12 @@ const Header = (props) => {
                             <HiOutlineHeart size='25' className='h-icon'/>
                         </Link>
                     </li>
-
-                    <li>
-                        <a href='#'>
-                            <BsHandbag size='23' className='h-icon bag' />
-                        </a>
-                        {cart.length ? <><button className='bag-qty'>{cart.map(el => el.qty).reduce((acc, curr) => acc + curr)}</button></>
+                    
+                    {cart.length ? <><button className='bag-qty' onClick={()=>handletoggle()}>{cart.map(el => el.qty).reduce((acc, curr) => acc + curr)}</button></>
                     : ''}
+                    <li id='bag' onClick={()=>handletoggle()}>
+                        <button></button>
+                        <BsHandbag size='23' />   
                     </li>
 
                     <li>{user && <Link to='/logout' className='h-icon'>Logout</Link>}</li>
@@ -67,31 +65,47 @@ const Header = (props) => {
             <Navbar />
 
             {/* -----------Cart Menu-------- */}
-            <div className='cart-menu'>
+            {cartToggle ? <>
+                <div className='cart-menu'>
+                
+                <button className='close-x' onClick={()=>handletoggle()}><GrFormClose className='close-icon' size={20} /></button>
                 <ul>
                     <h5>Bag</h5>
                     <hr/>
                     {cart.map(el => <>
-                    <li key={el._id}>
-                        <img src={el.product_id.image_one} alt='product-image'/>
-                        <div>
+                    <li key={el.product_id._id}>
+                        <img src={el.product_id.image_one} alt='product-image' />
+                        <div className='p-list'>
                             <p style={{fontWeight: 'bold'}}>{el.product_id.brand}</p>
-                            <Link to={`/product-detail/${el._id}`}><p style={{width:'180px'}}>{el.product_id.name}</p></Link>
-                            <button className='remove-btn'>Remove</button>
+                            <Link to={`/product-detail/${el.product_id._id}`}><p style={{width:'180px'}}>{el.product_id.name}</p></Link> 
+                            <span>Price:${el.product_id.price / 100 + '.00'} </span>
+                            <span> Qty:{el.qty} </span>
+                            <button className='remove-btn' onClick={()=>removeProduct(el.product_id._id)}>Remove</button>
                         </div>
-                        <span>Qty: {el.qty}</span>
-                        <span style={{fontWeight: 'bold'}}>${el.product_id.price * el.qty / 100 + '.00'}</span>    
+
+                        <div className='price'>
+                            <span style={{fontWeight: 'bold'}}> ${el.product_id.price * el.qty / 100 + '.00'}</span> 
+                        </div>   
                     </li>
                     <hr/>
                     </>)}
                     
-                    {cart.length ? <><p>Subtotal: {cart.map(el => el.qty).reduce((acc, curr) => acc + curr)} items</p></>
+                    <div className='subtotal'>
+                    {cart.length ? <>
+                    <span>Subtotal: {cart.map(el => el.qty).reduce((acc, curr) => acc + curr)} items</span>
+                    <span style={{fontWeight:'bold'}}>${cart.map(el => el.product_id.price * el.qty).reduce((acc, curr) => acc + curr) / 100 + '.00'}</span>   
+                    </>
                     : ''}
-
-                <button className='checkout-btn'>View Bag & Checkout</button> 
+                    </div>
+                    
+                    <div className='check'>
+                        <Link to='/cart' className='checkout-btn' onClick={()=>handletoggle()}>View Bag & Checkout</Link>
+                    </div> 
                 </ul>
-                       
+                     
             </div>
+            </> : ''}
+            
         </div>
     );
 };

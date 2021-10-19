@@ -1,0 +1,92 @@
+.cart-first h4{
+    margin: 20px 0px 50px;
+}
+
+.cart-page {
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.cart-page img {
+    width: 20%;
+    height: 80%;
+    object-fit: contain;
+    
+}
+
+.cart-page .p-list {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.cart-page li {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    height: 120px;
+}
+
+.cart-page .remove-btn {
+    width: 100px;
+    font-size: 0.8rem;
+    margin: 10px 0;
+    background-color: transparent;
+    border-style: none;
+    color: rgb(29, 29, 218);
+}
+
+.remove-btn:hover {
+    text-decoration: underline;
+}
+
+.cart-page a {
+    color: black;
+    text-decoration: none;
+}
+
+.cart-page h4 {
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.p-list span {
+    font-size: 0.rem;
+}
+
+.cartpage-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px;
+}
+
+.sub-container {
+    width: 25%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;  
+    padding: 20px;
+    border: 1px solid rgb(165, 164, 164);
+}
+
+.sub {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sub-container button {
+    width: 80%;
+    height: 30px;
+    margin: 0 auto;
+    background-color: red;
+    border-radius: 15px;
+    border-style: none;
+    color: white;
+}
+
+
+

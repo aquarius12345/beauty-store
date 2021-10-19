@@ -7,13 +7,11 @@ import Review from '../components/Review';
 const Details = (props) => {
     console.log('details', props)
     const [product, setProduct] = useState({});
-    const [qty, setQty] = useState('');
-    //console.log('qty value', typeof inputValue)
+    const [qty, setQty] = useState('1');
     const [toggleImg, setToggleImg] = useState(false);
     
     useEffect(() => {
         oneProduct();
-
     }, [])
 
     const oneProduct = async() => {
@@ -24,40 +22,40 @@ const Details = (props) => {
 
     useEffect(() => {
        oneProduct();
-       console.log('oneProduct no useEffect2', product)
-    }, [props.match.params.id, qty])
-    
+       //console.log('oneProduct no useEffect2', product)
+    }, [props.match.params.id, qty]);
+
 
     const heart = '♥';
     const emptyheart = '♡'
 
     const rating = (number) => {
         return heart.repeat(number).padEnd(5, emptyheart);
-    }
+    };
 
     const handleInput = (e) => {
         e.preventDefault();
         setQty(e.target.value);
-    }
+    };
 
     const addToCart = async(el) => {
         try {
             const result = await api.post(`/cart/${el}`,{qty});
-            console.log('add to cart', result)
-            oneProduct();
+            //console.log('add to cart', result)
+            props.getCart();
         }catch(error){
             console.error(error);
         }
-    }
+    };
+
 
     return (
-    
         <div className='details'>
-        {product.name ? <>
+        {product ? <>
            <div className='det-container'>
                <div className='btn-container'>
                    <button onClick={() => setToggleImg(false)}> <img src={product.image_one} alt={product.name}/></button>
-                   <button onClick={() => setToggleImg(true)}><img src={product.image_two} alt="second-image"/></button>
+                   <button onClick={() => setToggleImg(true)}><img src={product.image_two} alt="second"/></button>
                </div>
                {!toggleImg ?
                 
@@ -75,13 +73,13 @@ const Details = (props) => {
                     <p style={{fontWeight:'bold'}}>Skin type: {product.skin_type}</p>
                     <p style={{fontWeight:'bold'}}>Size: {product.size}</p>
                     <span style={{fontSize: '0.9rem'}}>Qty:</span>
-                    <input type='number' onChange={handleInput}></input>
+                    <input type='number' onChange={handleInput} value={qty}></input>
                     <button onClick={()=>addToCart(product._id)}>ADD TO BAG</button>
                </div>   
            </div>
 
             
-           <div className='high'>
+            <div className='high'>
                 <hr/>
                 <h4>Highlights</h4>
                     <div>
@@ -147,24 +145,7 @@ const Details = (props) => {
                 <hr/>
                 <Review  id={props.match.params.id} />
             </div>
-            
-            {/* <div>
-                <div className='dark'>
-                    {!mod ? '' : (
-                        <form className='m'>
-                        <button id='close-btn' onClick={toggle}>X</button>
-                        <h5>Please share your experience</h5>
-                        <p>Your feedback will help other shoppers make good choices, and we'll use it to improve our products.</p>
-                        <div>
-                            <p>Review *</p> 
-                            <textarea/>
-                        </div>
-                        <p style={{fontSize: '0.8rem'}}>Make your review great: Describe what you liked, what you didn’t like, and other key things shoppers should know.</p>
-                        <button type='submit'>SUBMIT</button>  
-                    </form>
-                    )}          
-                </div> 
-            </div> */}
+        
          </>  : '' }           
         </div>
     );
