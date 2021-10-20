@@ -15,9 +15,8 @@ const Header = (props) => {
     const [user, setUser] = useState(localStorage.getItem('userName'));
     const [cart, setCart] = useState([]);
     const [cartToggle, setCartToggle] = useState(false);
-    console.log('cart toggle', cartToggle)
-
-    console.log('cart in header', cart)
+    //console.log('cart toggle', cartToggle)
+    //console.log('cart in header', cart)
 
     useEffect(() => {
         setCart(props.cartData);   
@@ -47,7 +46,7 @@ const Header = (props) => {
                         {user ? <p>Hello, {user}!</p> : <Link to='/signup' className='sign h-icon'><p className='h-icon'>Sign In</p></Link>}
                     </li>
                     <li>
-                        <Link to='#'>
+                        <Link to='/my-list'>
                             <HiOutlineHeart size='25' className='h-icon'/>
                         </Link>
                     </li>

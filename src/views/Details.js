@@ -3,9 +3,8 @@ import api from '../configs/api';
 import './Details.css';
 import Review from '../components/Review';
 
-
 const Details = (props) => {
-    console.log('details', props)
+    console.log('details props', props)
     const [product, setProduct] = useState({});
     const [qty, setQty] = useState('1');
     const [toggleImg, setToggleImg] = useState(false);
@@ -16,7 +15,7 @@ const Details = (props) => {
 
     const oneProduct = async() => {
         const result = await api.get(`/product/${props.match.params.id}`);
-        console.log('result oneProduct', result.data)
+        //console.log('result oneProduct', result.data)
         setProduct(result.data);
     }
 
@@ -24,6 +23,10 @@ const Details = (props) => {
        oneProduct();
        //console.log('oneProduct no useEffect2', product)
     }, [props.match.params.id, qty]);
+
+    // const addToMyList = async(el) => {
+    //     await api.post(`/my-list/${el}`);
+    // }
 
 
     const heart = '♥';
@@ -53,18 +56,20 @@ const Details = (props) => {
         <div className='details'>
         {product ? <>
            <div className='det-container'>
-               <div className='btn-container'>
-                   <button onClick={() => setToggleImg(false)}> <img src={product.image_one} alt={product.name}/></button>
+               <div className='btnn-container'>
+                   <button onClick={() => setToggleImg(false)}><img src={product.image_one} alt={product.name}/></button>
                    <button onClick={() => setToggleImg(true)}><img src={product.image_two} alt="second"/></button>
                </div>
-               {!toggleImg ?
-                
+               
+               {!toggleImg ?    
                <img src={product.image_one} alt={product.name}/>
                :
                <img src={product.image_two} alt="second-image"/>
                 }
+
+                <button className='heart' onClick={()=> props.add(product._id)}>♡</button>
                
-               <div className='description'>
+                <div className='description-d'>
                     <h3>{product.brand}</h3>
                     <h6>{product.name}</h6>
                     <span>{rating(product.rating)} {product.rating + '.0'}</span>
@@ -75,7 +80,7 @@ const Details = (props) => {
                     <span style={{fontSize: '0.9rem'}}>Qty:</span>
                     <input type='number' onChange={handleInput} value={qty}></input>
                     <button onClick={()=>addToCart(product._id)}>ADD TO BAG</button>
-               </div>   
+                </div>   
            </div>
 
             

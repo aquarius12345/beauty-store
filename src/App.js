@@ -10,17 +10,18 @@ import BodyCare from './views/BodyCare';
 import Details from './views/Details';
 import FaceCare from './views/FaceCare';
 import CartPage from './views/CartPage';
+import MyList from './views/MyList';
 import api from './configs/api';
 
 
 function App() {
-
-  const [cart, setCart] = useState([])
-  console.log('cart', cart)
+  const [cart, setCart] = useState([]);
+  const [list, setList] = useState([]);
+  //console.log('cart', cart)
 
     useEffect(() => {
         getCart();    
-    }, [])
+    }, []);
 
     const getCart = async() => {
        try {
@@ -32,6 +33,26 @@ function App() {
        }
     };
 
+    useEffect(() => {
+      getMyList();
+    }, []);
+
+   const getMyList = async() => {
+     try {
+      const result = await api.get('/my-list');
+      console.log('my list result', result.data.products);
+      setList(result.data.products);
+     }catch(error){
+       console.error(error);
+     }    
+   };
+
+    const addToMyList = async(el) => {
+      await api.post(`/my-list/${el}`);
+      getMyList();
+    };
+
+
   return (
     <div className="App">
       <Today />
@@ -41,9 +62,10 @@ function App() {
         <Route exact path='/signup' component= {Signup} />
         <Route exact path='/logout' component={Logout} />
         <Route exact path='/bodycare' component={BodyCare} />
-        <Route exact path='/product-detail/:id' render={(props)=> <Details {...props} getCart={getCart}/>} />
+        <Route exact path='/product-detail/:id' render={(props)=> <Details {...props} getCart={getCart} add={addToMyList} />} />
         <Route exact path='/face-care' component={FaceCare} />
-        <Route exact path='/cart' render={(props)=> <CartPage {...props} cartData={cart} getCart={getCart}/> }/>
+        <Route exact path='/cart' render={(props)=> <CartPage {...props} cartData={cart} getCart={getCart} /> }/>
+        <Route exact path='/my-list' render={(props)=> <MyList {...props} list={list} getList={getMyList} getCart={getCart}/> }/>
       </Switch>
     </div>
   );

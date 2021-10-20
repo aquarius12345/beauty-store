@@ -7,7 +7,7 @@ import { RiCloseFill } from 'react-icons/ri';
 
 
 const Review = (props) => {
-    console.log('props', props);
+    //console.log('props', props);
     const [reviewsList, setReviewsList] = useState([]);
     const [mod, setMod] = useState(false);
     const [review, setReview] = useState('');

@@ -41,17 +41,14 @@ const CartPage = (props) => {
                             <span style={{fontSize:'0.8rem'}}>Price:${el.product_id.price / 100 + '.00'} </span>
                             <span style={{fontSize:'0.8rem'}}> Qty:{el.qty} </span>
                             <div className='cartpage-btn'>
-                                <button className='remove-btn' onClick={()=>removeProduct(el.product_id._id)}><span>Remove</span></button>
-                                <span style={{color: 'blue'}}> |</span>
-                                <button className='remove-btn'><span>Add to My List</span></button>
+                                <button className='remove-btn' onClick={()=>removeProduct(el.product_id._id)}><span>Remove</span></button>    
                             </div>
                         </div>
 
                         <div className='price'>
                             <span style={{fontWeight: 'bold'}}> ${el.product_id.price * el.qty / 100 + '.00'}</span> 
                         </div>  
-                    </li>
-                    
+                    </li> 
                     </>)}
                     
                     <div className='subtotal'>
@@ -90,7 +87,7 @@ const CartPage = (props) => {
             </div>
 
         </div>   
-    )
+    );
 };
 
 export default CartPage;

@@ -25,7 +25,7 @@ const Slider = (props) => {
 
     return (
         <div className='slider'>
-            <h1>{props.title}</h1>
+            <h2>{props.title}</h2>
             <div className='rec' ref={rec}>
                     <div className='slider-list'>
                         {newData.map(el => 

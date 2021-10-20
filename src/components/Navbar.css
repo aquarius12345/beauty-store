@@ -44,10 +44,10 @@
     visibility: hiddden;
 }
 
-.first-li:hover .inside {
+/* .first-li:hover .inside {
     opacity: 1;
     visibility: visible;
-}
+} */
 
 .inside li {
     margin-left: 30px;
