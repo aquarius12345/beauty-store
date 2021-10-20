@@ -1,0 +1,20 @@
+.about {
+    height: 670px;
+    padding: 10px;
+    color: white;
+    margin: 0px auto;
+    background-color: #222;
+}
+
+.about img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 60%;
+    margin-top: 50px;
+}
+
+.about p {
+    width: 30%;
+    margin: 0 auto;;
+}

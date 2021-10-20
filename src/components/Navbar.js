@@ -9,31 +9,31 @@ const Navbar = () => {
             <div className='navbar'>
                 <ul className='first-ul'>
                     <li className='no-inside'>
-                        <a href='#'>SHOP ALL</a>
+                        <Link to='/store/all'>SHOP ALL</Link>
                     </li>
                     <li className='no-inside'>
-                        <a href='#'>BEST SELLERS</a>
+                        <Link to='/store/bestsellers'>BEST SELLERS</Link>
                     </li>
                     <li className='first-li'>
                         <Link to='/bodycare'>BODY CARE</Link>
                         <ul className='inside'>
-                            <li><a href='#'>Best Sellers</a></li>
-                            <li><a href='#'>Body Creams</a></li>
-                            <li><a href='#'>Body Cleansers</a></li>
-                            <li><a href='#'>Handcreams</a></li>
+                            <li><Link to='/bodycare?name=oily'>Oily Skin</Link></li>
+                            <li><Link to='/bodycare?name=dry'>Dry Skin</Link></li>
+                            <li><Link to='/bodycare?name=sensitive'>Sensitive Skin</Link></li>
+                            <li><Link to='/bodycare?name=all'>All Skin Types</Link></li>
                         </ul>
                     </li>
                     <li className='first-li'>
                         <Link to='/face-care'>FACE CARE</Link>
                         <ul className='inside'>
-                            <li><a href='#'>Best Sellers</a></li>
-                            <li><a href='#'>Serums</a></li>
-                            <li><a href='#'>Face Masks</a></li>
-                            <li><a href='#'>Eyes&Lips</a></li>
+                            <li><Link to='/face-care?name=oily'>Oily Skin</Link></li>
+                            <li><Link to='/face-care?name=dry'>Dry Skin</Link></li>
+                            <li><Link to='/face-care?name=sensitive'>Sensitive Skin</Link></li>
+                            <li><Link to='/face-care?name=all'>All Skin Types</Link></li>
                         </ul>
                     </li>
                     <li className='no-inside'>
-                        <a href='#'>ABOUT</a>  
+                        <Link to='/about'>ABOUT</Link>  
                     </li>
                 </ul>
             </div>

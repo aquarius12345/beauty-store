@@ -92,7 +92,6 @@ const BodyFace = (props) => {
         <div>
             {/* -------------Rendering Products section------------ */}
             <section className='products-part'>
-            
                 <div className='result'>
                     <p>{'('+ skinType.length +')'} Results</p> 
                 </div>
@@ -113,7 +112,6 @@ const BodyFace = (props) => {
                     }
                     </ul>
                 </div>
-          
             </section>      
         </div>
     );

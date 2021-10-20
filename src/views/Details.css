@@ -94,11 +94,12 @@
 .heart {
     font-size: 1.5rem;
     border-style: none;
-    background-color: white;
+    background-color: transparent;
     width: 45px;
     height: 40px;
     border-radius: 50%;
-    z-index: 690;
+    z-index: 190;
+    margin-top: 410px;
 }
 
 .heart:hover {

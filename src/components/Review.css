@@ -41,11 +41,11 @@ h4 {
 .m {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-evenly; */
     color: black;
     height: 700px;
     width: 30vw;
-    padding: 0px 20px 80px;
+    /* padding: 0px 30px 120px; */
     border-radius: 5px;
     z-index: 750;
     position: absolute;
@@ -64,11 +64,11 @@ h4 {
     margin: 0 auto;
 }
 
-#close-btn {
-    background-color: transparent;
+.m #close-btn {
     color: black;
     text-align: end;
-    width: 98%;
+    width: 100%;
+    background-color: transparent;
 }
 
 .dark {
@@ -105,4 +105,12 @@ h4 {
     padding: 15px 40px;
     margin: 0 auto;
     margin-bottom: 40px;
+}
+
+.m .rev-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+    padding: 5%;
 }

@@ -24,10 +24,6 @@ const Details = (props) => {
        //console.log('oneProduct no useEffect2', product)
     }, [props.match.params.id, qty]);
 
-    // const addToMyList = async(el) => {
-    //     await api.post(`/my-list/${el}`);
-    // }
-
 
     const heart = '♥';
     const emptyheart = '♡'

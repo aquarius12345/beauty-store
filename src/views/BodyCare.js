@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import api from '../configs/api';
 import './BodyCare.css';
 import BodyFace from '../components/BodyFace';
@@ -11,17 +11,7 @@ const initialState = {
     btnThree: false
 }
 
-// function useQuery() {
-//     return new URLSearchParams(useLocation().search);
-// }
-
 const BodyCare = () => {
-
-    // let query = useQuery();
-    // //console.log(query)
-
-    // const location = useLocation();
-    // console.log('useLocation', location)
 
     const [products, setProducts] = useState([]);
     const [button, setButton] = useState(initialState);
@@ -113,7 +103,6 @@ const BodyCare = () => {
                         }
                     </li>
                     <hr/>
-
                 </ul>
             </section>
 

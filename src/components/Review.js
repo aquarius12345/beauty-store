@@ -79,17 +79,16 @@ const Review = (props) => {
                         
                         <form className='m' onSubmit={handleSubmit}>
                             <button id='close-btn' onClick={toggle}><RiCloseFill/></button>
-                            
-                            <h5 style={{fontWeight: 'bold'}}>Please share your experience</h5>
-                            <p>Your feedback will help other shoppers make good choices, and we'll use it to improve our products.</p>
-                            <div>
-                                <p>Review *</p> 
-                                <textarea value={review} onChange={(e)=> setReview(e.target.value)}/>
+                            <div className='rev-container'>
+                                <h5 style={{fontWeight: 'bold'}}>Please share your experience</h5>
+                                <p>Your feedback will help other shoppers make good choices, and we'll use it to improve our products.</p>
+                                <div>
+                                    <p>Review *</p> 
+                                    <textarea value={review} onChange={(e)=> setReview(e.target.value)}/>
+                                </div>
+                                <p style={{fontSize: '0.8rem'}}>Make your review great: Describe what you liked, what you didn’t like, and other key things shoppers should know.</p>
+                                <button type='submit'>SUBMIT</button>  
                             </div>
-                            <p style={{fontSize: '0.8rem'}}>Make your review great: Describe what you liked, what you didn’t like, and other key things shoppers should know.</p>
-                            <button type='submit'>SUBMIT</button>  
-                            
-                            
                         </form></>) : (<>
                         <div className='go-login'>
                         <button id='close-btn' onClick={toggle}><RiCloseFill/></button>
