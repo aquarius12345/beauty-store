@@ -6,14 +6,13 @@ import api from '../configs/api';
 import './ShowAll.css';
 
 
-const ShowAll = (props) => {
+const BestSellers = (props) => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(false);
     const { name } = props.match.params;
     console.log('name', name);
 
     useEffect(() => {
-       //console.log('inside use effect')
        getAll()
     }, [])
 
@@ -29,22 +28,24 @@ const ShowAll = (props) => {
         };  
     };
 
+    const filtered = products.filter(el => el.rating === 5);
+
     return (
         <div className='showall'>
            {loading ? (
                products.length ? <>
                 <section className='products-part'>
-                    <h3>ALL PRODUCTS</h3>
+                    <h3>BEST SELLERS</h3>
                     <div className='result'>
-                        <p>{'('+ products.length +')'} Results</p> 
+                        <p>{'('+ filtered.length +')'} Results</p> 
                     </div>
 
                     <div>
                         <ul className='the-ul'>
-                            {products.map(el => <>
+                            {filtered.map(el => <>
                             <li key={el._id} className='prd-card'> 
                             <Link to={`/product-detail/${el._id}`}>
-                            <img src={el.image_one} alt='body product'/>
+                            <img src={el.image_one} alt={el.name}/>
                             <div>
                                 <p style={{fontWeight: 'bold'}}>{el.brand}</p>
                                 <p style={{fontSize: '0.9rem'}}>{el.name}</p>
@@ -71,4 +72,4 @@ const ShowAll = (props) => {
     );
 };
 
-export default ShowAll;
+export default BestSellers;

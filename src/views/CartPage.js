@@ -6,10 +6,12 @@ import './CartPage.css';
 
 
 const CartPage = (props) => {
+
+    console.log('cart data', props.cartData);
     const [cart, setCart] = useState([]);
 
     useEffect(() => {
-        setCart(props.cartData);   
+        setCart(props.cartData);  
     }, [props.cartData]);
 
     const removeProduct = async(id) => {
@@ -20,6 +22,17 @@ const CartPage = (props) => {
             console.error(error);
         }
     };
+
+    const handleQty = async(el, e) => {
+        const qty = e.target.value
+        console.log('cart input value', qty);
+        try {
+            await api.put(`/cart/${el}`, {qty});
+            props.getCart();
+        }catch(error){
+            console.error(error);
+        }
+    }
 
     const sumItems = useMemo(()=> cart.map(el => el.qty).reduce((acc, curr) => acc + curr, 0), [cart]);
 
@@ -39,8 +52,9 @@ const CartPage = (props) => {
                             <p style={{fontWeight: 'bold'}}>{el.product_id.brand}</p>
                             <Link to={`/product-detail/${el.product_id._id}`}><p>{el.product_id.name}</p></Link> 
                             <span style={{fontSize:'0.8rem'}}>Price:${el.product_id.price / 100 + '.00'} </span>
-                            <span style={{fontSize:'0.8rem'}}> Qty:{el.qty} </span>
+                            {/* <span style={{fontSize:'0.8rem'}}> Qty:{el.qty} </span> */}
                             <div className='cartpage-btn'>
+                                <input type='number' value={el.qty} onChange={(e)=>handleQty(el.product_id._id, e)}/>
                                 <button className='remove-btn' onClick={()=>removeProduct(el.product_id._id)}><span>Remove</span></button>    
                             </div>
                         </div>

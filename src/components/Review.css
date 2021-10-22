@@ -1,6 +1,7 @@
 .review {
     text-align: start;
     position: relative;
+    margin-bottom: 100px;
 }
 
 .review-container {
@@ -41,18 +42,19 @@ h4 {
 .m {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-evenly; */
     color: black;
-    height: 700px;
+    height: 650px;
     width: 30vw;
-    /* padding: 0px 30px 120px; */
     border-radius: 5px;
     z-index: 750;
     position: absolute;
-    top: 0;
-    margin-left: 60%;
-    margin-top: -620px;
-    background-color: white;    
+    top: 50;
+    margin-left: 700px;
+    /* margin-left: 60%;
+    margin-top: -620px; */
+    background-color: white;
+    position: absolute;
+    z-index: 950;    
 }
 
 .m textarea {
@@ -64,21 +66,21 @@ h4 {
     margin: 0 auto;
 }
 
-.m #close-btn {
-    color: black;
-    text-align: end;
-    width: 100%;
-    background-color: transparent;
+.go-login #close-btn-small {
+    margin-left: 90%;
 }
 
 .dark {
     width: 105vw;
-    height: 1380px;
+    height: 200vh;
     display: flex;
     background-color: rgba(117, 116, 116, 0.5);
     margin-top: -1350px;
     margin-left: -300px;
+    margin-bottom: 0;
     padding-top: 700px;
+    position: absolute;
+    z-index: 905;
 }
 
 .go-login {
@@ -88,11 +90,11 @@ h4 {
     text-align: center;
     height: 40%;
     width: 25vw;
-    z-index: 810;
+    z-index: 912;
     top: 100;
     margin: 0 auto;
     padding-top: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: white;
 }
 
@@ -100,9 +102,9 @@ h4 {
     width: 150px;
     color: white;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     background-color: black;
-    padding: 15px 40px;
+    padding: 12px 40px;
     margin: 0 auto;
     margin-bottom: 40px;
 }

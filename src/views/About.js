@@ -11,7 +11,7 @@ const About = () => {
                 <h6>Full Stack Web Developer</h6>
                 <p><AiOutlineLinkedin /> https://www.linkedin.com/in/debora-seo</p>
                 <br/>
-                <p style={{textAlign:'start'}}>Thanks for visiting, this is my final Solo Project for Ironhack Web Development Bootcamp. I started coding the Back-end with Javascript, Express, Cors, JWT Token, 
+                <p style={{textAlign:'start'}}>Thanks for visiting, this is my final Solo Project for Ironhack Web Development Bootcamp. I started coding the Back-end, creating an API with Javascript, Express, Cors, JWT Token, 
                 MongoDB, Mongoose and did tests with Insomnia. After that i created the Front-end, with React, Axios, CSS and HTML.
                 </p>   
             </div>

@@ -5,11 +5,16 @@
     height: 100px;
     display: flex;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
     font-family: sans-serif;
     border-style: none;
     font-size: 1rem;
     padding-top: 20px;
+}
+
+.header img {
+    width: 170px;
+    margin-top: -2px;
 }
 
 .header h3 {
@@ -22,6 +27,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 10px;
 }
 
 .header li {
@@ -92,7 +98,6 @@
 }
 
 .cart-menu .checkout-btn {
-    /* width: 50%; */
     border-radius: 20px;
     background-color: red;
     color: white;
@@ -134,11 +139,6 @@
     /* background-color: tomato; */
 }
 
-#bag button {
-    background-color: transparent;
-    border-style: none;
-}
-
 .bag-qty {
     width: 22px;
     height: 22px;
@@ -149,7 +149,7 @@
     background-color: red;
     color: white;
     position: absolute;
-    margin-left: 228px;
+    margin-left: 222px;
     margin-top: -5px;
 }
 

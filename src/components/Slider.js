@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Slider.css';
 import { BsChevronCompactRight, BsChevronCompactLeft } from 'react-icons/bs';
@@ -32,7 +32,6 @@ const Slider = (props) => {
                         
                         <div className='slider-card'>
                             <Link to={`product-detail/${el._id}`} key={el._id}>
-                            {props.spantext ? <p className='p'>{props.spantext}</p> : ''}
                             <img src={el.image_one} alt='product-img'/>
                             <h6>{el.brand}</h6>
                             <p>{el.name}</p>

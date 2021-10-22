@@ -6,6 +6,7 @@ import './MyList.css';
 
 const MyList = (props) => {
     const [list, setList] = useState([]);
+    const [user, setUser] = useState(localStorage.getItem('userName'));
     //console.log('list', list)
 
     useEffect(() => {
@@ -35,29 +36,33 @@ const MyList = (props) => {
     return (
         <div>
             <div className='my-list'>
-            <h3>Favorites</h3>
-                {list.length ? <>
-                <ul>
-                    {list.map(el => <>
-                    <li key={el._id}>
-                        <img src={el.image_one} alt={el.name}/>
-                        <div className='description'>
-                            <Link to={`product-detail/${el._id}`}>
-                                <h6>{el.brand}</h6>
-                                <p>{el.name}</p>
-                            </Link>
-                            <p>Size:{el.size}</p>
-                            <p>Price:${el.price / 100 + '.00'}</p>
-                        </div>
-                        <div className='desc-btn'>
-                            <button onClick={()=> moveToCart(el._id)}>Add To Cart</button>
-                            <button id='delete-btn' onClick={()=> deleteFav(el._id)}>Delete</button>
-                        </div>   
-                    </li>
-                    </>)}
-                </ul>
-                </>
-                : ''}    
+            {user ? 
+            (<> <h3>Favorites</h3>
+                 {list.length ? 
+                    (<>
+                        <ul>
+                            {list.map(el => <>
+                            <li key={el._id}>
+                                <img src={el.image_one} alt={el.name}/>
+                                <div className='description'>
+                                    <Link to={`product-detail/${el._id}`}>
+                                        <h6>{el.brand}</h6>
+                                        <p>{el.name}</p>
+                                    </Link>
+                                    <p>Size:{el.size}</p>
+                                    <p>Price:${el.price / 100 + '.00'}</p>
+                                </div>
+                                <div className='desc-btn'>
+                                    <button onClick={()=> moveToCart(el._id)}>Add To Cart</button>
+                                    <button id='delete-btn' onClick={()=> deleteFav(el._id)}>Delete</button>
+                                </div>   
+                            </li>
+                            </>)}
+                        </ul>
+                    </>)
+                 : ''}    
+            </>)
+             : ( <h5 style={{margin: '50px'}}>Please Login to Add and Watch to Favorites List.</h5> )}
             </div>
         </div>
     );

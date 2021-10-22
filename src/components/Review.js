@@ -12,7 +12,7 @@ const Review = (props) => {
     const [mod, setMod] = useState(false);
     const [review, setReview] = useState('');
     //console.log('review',review);
-    const [error, setError] = useState('');
+    // const [error, setError] = useState('');
     const token = localStorage.getItem('token');
 
 
@@ -27,7 +27,7 @@ const Review = (props) => {
             setReviewsList(result.data);
         } catch(error) {
             console.error(error);
-            setError(error.response.data.message);
+            // setError(error.response.data.message);
         };
     };
 
@@ -55,20 +55,21 @@ const Review = (props) => {
 
     return (
         <div>
-            <div className='review'>
-                   
+            <div className='review'>      
                 <article>
                     <h4>Reviews {'(' + reviewsList.length + ')'}</h4>
                     <button onClick={toggle}>Write a Review</button>
                 </article>
 
-                {reviewsList ? (
+                {reviewsList.length ? (
                   <ul className='review-container'>
                     {reviewsList.map((el) => 
                     
                     <li kew={el._id}>
                         <p>"{el.review}"</p>
                         <span><CgGirl size={'20'}/>  {el.user_id.name}</span>
+                        {el.createdAt &&
+                        <span style={{fontSize: '0.9rem', marginLeft: '20px'}}>{el.createdAt.slice(0, 10)}</span>}
                         <hr/>
                     </li>)}
                   </ul>) : null}
@@ -76,9 +77,8 @@ const Review = (props) => {
                 <div  className={ mod ? 'dark' : '' }>
                     {!mod ? '' : ( <>
                     {token ? (<>
-                        
                         <form className='m' onSubmit={handleSubmit}>
-                            <button id='close-btn' onClick={toggle}><RiCloseFill/></button>
+                            <RiCloseFill style={{margin: '1% 95%'}} onClick={toggle}/>
                             <div className='rev-container'>
                                 <h5 style={{fontWeight: 'bold'}}>Please share your experience</h5>
                                 <p>Your feedback will help other shoppers make good choices, and we'll use it to improve our products.</p>
@@ -89,14 +89,15 @@ const Review = (props) => {
                                 <p style={{fontSize: '0.8rem'}}>Make your review great: Describe what you liked, what you didn’t like, and other key things shoppers should know.</p>
                                 <button type='submit'>SUBMIT</button>  
                             </div>
-                        </form></>) : (<>
-                        <div className='go-login'>
-                        <button id='close-btn' onClick={toggle}><RiCloseFill/></button>
-                        <h5>Please login to write a review.</h5>
-                        <Link to='/signup'>Login</Link>
-                    </div>
-                    </>)
-                }
+                        </form></>) : 
+                        (<>
+                            <div className='go-login'>
+                                <RiCloseFill onClick={toggle} id='close-btn-small'/>
+                                <h5>Please login to write a review.</h5>
+                                <Link to='/signup'>LOGIN</Link>
+                            </div>
+                        </>)
+                    }
                     </>)}          
                 </div>            
                 

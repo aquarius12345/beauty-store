@@ -16,7 +16,7 @@ const Caroussel = () => {
                         src="https://res.cloudinary.com/dgzbojudn/image/upload/v1634313454/beautyStore/capture-youth5_1440_1200_zmxhoj.webp"
                         />
                         <Carousel.Caption>
-                        <Link to="#" className='caroussel-btn'>SHOP ALL</Link>
+                        {/* <Link to="#" className='caroussel-btn'>SHOP ALL</Link> */}
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -40,7 +40,7 @@ const Caroussel = () => {
                         />
 
                         <Carousel.Caption>
-                        <Link to="#" className='caroussel-btn'>SHOP ALL</Link>
+                        {/* <Link to="#" className='caroussel-btn'>SHOP ALL</Link> */}
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>

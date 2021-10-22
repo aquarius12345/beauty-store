@@ -14,7 +14,9 @@ import MyList from './views/MyList';
 import ShowAll from './views/ShowAll';
 import About from './views/About';
 import Footer from './components/Footer';
+import BestSellers from './views/BestSellers';
 import api from './configs/api';
+
 
 
 function App() {
@@ -69,7 +71,8 @@ function App() {
         <Route exact path='/face-care' component={FaceCare} />
         <Route exact path='/cart' render={(props)=> <CartPage {...props} cartData={cart} getCart={getCart} /> }/>
         <Route exact path='/my-list' render={(props)=> <MyList {...props} list={list} getList={getMyList} getCart={getCart}/> }/>
-        <Route exact path='/store/:name' component={ShowAll} />
+        <Route exact path='/store/all' component={ShowAll} />
+        <Route exact path='/store/best-sellers'component={BestSellers} />
         <Route exact path='/about' component={About} />
       </Switch>
       <Footer />

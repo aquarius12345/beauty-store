@@ -21,7 +21,6 @@ const Details = (props) => {
 
     useEffect(() => {
        oneProduct();
-       //console.log('oneProduct no useEffect2', product)
     }, [props.match.params.id, qty]);
 
 
@@ -53,14 +52,14 @@ const Details = (props) => {
         {product ? <>
            <div className='det-container'>
                <div className='btnn-container'>
-                   <button onClick={() => setToggleImg(false)}><img src={product.image_one} alt={product.name}/></button>
-                   <button onClick={() => setToggleImg(true)}><img src={product.image_two} alt="second"/></button>
+                   <img src={product.image_one} alt={product.name} onClick={() => setToggleImg(false)}/>
+                   <img src={product.image_two} alt="second" onClick={() => setToggleImg(true)}/>
                </div>
                
                {!toggleImg ?    
-               <img src={product.image_one} alt={product.name}/>
+               <img src={product.image_one} className='img-size' alt={product.name}/>
                :
-               <img src={product.image_two} alt="second-image"/>
+               <img src={product.image_two} className='img-size' alt="second-image"/>
                 }
 
                 <button className='heart' onClick={()=> props.add(product._id)}>♡</button>

@@ -35,16 +35,15 @@ const Home = () => {
            <div className='banner'>
                <article className='banner-art'>
                 <img src="https://forwardpositive.com/wp-content/uploads/2020/08/fall-2020_laneige-gummy-bear_000_promo-660x330.jpg" alt='laneige'/>
-                <Link to="#" id="left">SHOP ALL</Link>
+                <Link to="/store/all" id="left">SHOP ALL</Link>
                </article>
                <article className='banner-art'>
                 <img src="https://bestkbeauty.com/wp-content/uploads/2020/11/dr-jart-ceramidin-review.jpg" alt="ceramidin"/>
-                <Link to="#" id="right">BEST SELLERS</Link>
+                <Link to="/store/best-sellers" id="right">BEST SELLERS</Link>
                </article>
            </div>
            <Slider data={bestSell} title={'Selling Fast'}/>
            <Slider data={choosen} title={'Choosen for you'}/>
-           {/* <Slider data={diorColl} title={'See Collection'}/> */}
         </div>
     );
 };

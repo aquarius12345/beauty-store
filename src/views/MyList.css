@@ -1,9 +1,13 @@
+.my-list {
+    height: 100vh;
+}
+
 .my-list ul {
     width: 60vw;
-    border: 1px solid rgb(204, 197, 197);
     text-align: start;
     margin: 0 auto;
     padding: 20px;
+    margin-bottom: 20px;
     background-color: rgb(247, 250, 253);
 }
 
@@ -15,7 +19,9 @@
 
 .my-list h3 {
     margin-top: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: start;
+    margin-left: 300px;
 }
 
 .my-list li {

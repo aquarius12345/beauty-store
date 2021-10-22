@@ -1,63 +1,86 @@
 .navbar {
-    width: 100vw;
-    height: 48px;
-    background-color: black;
-    color: whitesmoke;
-    font-size: 1rem;
-}
-
-.first-ul {
-    width: 70vw;
     height: 50px;
-    display: flex;
-    justify-content: space-around;
-    margin: 0 auto;
-    padding: 5px;
-    z-index: 200;
-    /* background-color: blueviolet; */
+    padding: 5px 300px;
+    margin-top: 20px;
+    background-color: black;
+    position: relative;
 }
 
-.navbar li {
-    list-style: none;
-    text-align: center;
-    /* background-color: chocolate; */
-}
-
-.first-ul a {
-    color: whitesmoke;
+.navbar a {
+    color: white;
     text-decoration: none;
+    height: 100%;
+    padding-top: 5px;
 }
 
-.first-ul a:hover {
+.navbar a:hover {
     color: pink;
 }
 
-.inside {
-    width: 15vw;
-    height: 220px;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: black;
-    opacity: 0;
-    visibility: hiddden;
+.navbar .dropdown {
+    height: 100%;
+    padding-top: 5px;
 }
 
-.first-li:hover .inside {
+.dropdown-content {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    height: 450px;
+    margin-left: -35vw;
+    margin-top: 5px;
+    width: 70vw;
+    z-index: 200;
+    color: black;
+    background-color: white;
+    box-shadow: 0 0 0.3em rgb(144, 150, 156);
+    padding: 50px 100px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.links h5 {
+    padding-bottom: 20px;
+    text-align: start;
+}
+
+.dropdown-content img {
+    width: 50%;
+    height: 250px;
+    object-fit: cover;
+    margin-left: 5px;
+}
+
+.nav-img {
+    display: flex;
+}
+
+.dropdown-content .links a {
+    width: 300px;
+    text-align: start;
+    height: 60px;
+    float: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: start;
+    color: black;
+}
+
+.dropdown-content .links a:hover {
+    color: pink;
+}
+
+.dropdown:hover .dropdown-content{
+    display: flex;
+    justify-content: space-around;
     opacity: 1;
     visibility: visible;
 }
 
-.inside li {
-    margin-left: 30px;
-    line-height: 3rem;
+#drop-face {
+    width: 70vw;
+    margin-left: -650px;
 }
-
-.no-inside {
-    padding: 0px 50px;
-}
-
 
 
 

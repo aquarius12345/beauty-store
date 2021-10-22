@@ -89,7 +89,7 @@ const BodyFace = (props) => {
     }
     
     return(
-        <div>
+        <div className='b-page'>
             {/* -------------Rendering Products section------------ */}
             <section className='products-part'>
                 <div className='result'>

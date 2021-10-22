@@ -38,7 +38,8 @@ const Header = (props) => {
     return (
         <div>
             <div className='header'>
-                <h3><Link to='/'>BEAUTYSTORE</Link></h3>
+                {/* <h3><Link to='/'>BEAUTYSTORE</Link></h3> */}
+                <Link to='/'><img src='https://res.cloudinary.com/dgzbojudn/image/upload/v1634861444/F27670FC-D4C8-4043-9538-9E8DFFC69C56_zhayju.jpg' alt='beautystore'/></Link>
                 <SearchBar data={props.data}/>
                 <ul>
                     <li className='sign h-icon'>
@@ -53,8 +54,7 @@ const Header = (props) => {
                     
                     {cart.length ? <><button className='bag-qty' onClick={()=>handletoggle()}>{cart.map(el => el.qty).reduce((acc, curr) => acc + curr)}</button></>
                     : ''}
-                    <li id='bag' onClick={()=>handletoggle()}>
-                        <button></button>
+                    <li id='bag' className='h-icon' onClick={()=>handletoggle()}>
                         <BsHandbag size='23' />   
                     </li>
 
@@ -65,42 +65,46 @@ const Header = (props) => {
 
             {/* -----------Cart Menu-------- */}
             {cartToggle ? <>
-                <div className='cart-menu'>
-                
-                <button className='close-x' onClick={()=>handletoggle()}><GrFormClose className='close-icon' size={20} /></button>
-                <ul>
-                    <h5>Bag</h5>
-                    <hr/>
-                    {cart.map(el => <>
-                    <li key={el.product_id._id}>
-                        <img src={el.product_id.image_one} alt='product-image' />
-                        <div className='p-list'>
-                            <p style={{fontWeight: 'bold'}}>{el.product_id.brand}</p>
-                            <Link to={`/product-detail/${el.product_id._id}`}><p style={{width:'180px'}}>{el.product_id.name}</p></Link> 
-                            <span>Price:${el.product_id.price / 100 + '.00'} </span>
-                            <span> Qty:{el.qty} </span>
-                            <button className='remove-btn' onClick={()=>removeProduct(el.product_id._id)}>Remove</button>
-                        </div>
+            <div className='cart-menu'>
+                <button className='close-x' onClick={()=>handletoggle()}><GrFormClose className='close-icon' size={15} /></button>
+                {user ? (
+                    <ul>
+                        <h5>Bag</h5>
+                        <hr/>
+                        {cart.map(el => <>
+                        <li key={el.product_id._id}>
+                            <img src={el.product_id.image_one} alt='product-image' />
+                            <div className='p-list'>
+                                <p style={{fontWeight: 'bold'}}>{el.product_id.brand}</p>
+                                <Link to={`/product-detail/${el.product_id._id}`}><p style={{width:'180px'}}>{el.product_id.name}</p></Link> 
+                                <span>Price:${el.product_id.price / 100 + '.00'} </span>
+                                <span> Qty:{el.qty} </span>
+                                <button className='remove-btn' onClick={()=>removeProduct(el.product_id._id)}>Remove</button>
+                            </div>
 
-                        <div className='price'>
-                            <span style={{fontWeight: 'bold'}}> ${el.product_id.price * el.qty / 100 + '.00'}</span> 
-                        </div>   
-                    </li>
-                    <hr/>
-                    </>)}
-                    
-                    <div className='subtotal'>
-                    {cart.length ? <>
-                    <span>Subtotal: {cart.map(el => el.qty).reduce((acc, curr) => acc + curr)} items</span>
-                    <span style={{fontWeight:'bold'}}>${cart.map(el => el.product_id.price * el.qty).reduce((acc, curr) => acc + curr) / 100 + '.00'}</span>   
-                    </>
-                    : ''}
-                    </div>
-                    
-                    <div className='check'>
-                        <Link to='/cart' className='checkout-btn' onClick={()=>handletoggle()}>View Bag & Checkout</Link>
-                    </div> 
-                </ul>
+                            <div className='price'>
+                                <span style={{fontWeight: 'bold'}}> ${el.product_id.price * el.qty / 100 + '.00'}</span> 
+                            </div>   
+                        </li>
+                        <hr/>
+                        </>)}
+                        
+                        <div className='subtotal'>
+                        {cart.length ? <>
+                        <span>Subtotal: {cart.map(el => el.qty).reduce((acc, curr) => acc + curr)} items</span>
+                        <span style={{fontWeight:'bold'}}>${cart.map(el => el.product_id.price * el.qty).reduce((acc, curr) => acc + curr) / 100 + '.00'}</span>   
+                        </>
+                        : ''}
+                        </div>
+                        
+                        <div className='check'>
+                            <Link to='/cart' className='checkout-btn' onClick={()=>handletoggle()}>View Bag & Checkout</Link>
+                        </div> 
+                    </ul>
+                ) : (
+                    <p style={{margin: '0 auto'}}>Please Login to add in Cart</p>
+                )};
+                
                      
             </div>
             </> : ''}

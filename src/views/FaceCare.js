@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Spinner } from 'react-bootstrap';
 import api from '../configs/api';
 import './FaceCare.css';
 import BodyFace from '../components/BodyFace';
@@ -16,6 +17,7 @@ const FaceCare = () => {
     const [products, setProducts] = useState([]);
     const [button, setButton] = useState(initialState);
     const [checked, setChecked] = useState(null);
+    const [loading, setLoading] = useState(false);
     
     useEffect(() => {
         getProducts();
@@ -25,7 +27,7 @@ const FaceCare = () => {
         try {
             const result = await api.get('/product/all');
             setProducts(result.data);
-            
+            setLoading(true);
         } catch(error) {
             console.error(error.response);
         };
@@ -41,7 +43,8 @@ const FaceCare = () => {
 
     return (
         <div className='page-margin'>
-            <section className='filter'>
+            {loading ? (
+                <section className='filter'>
                 <ul className='filter-list'>
                     <Link to='/face-care' id='bodycare-link'>Face Care</Link>
                     <h6>Filters</h6>
@@ -100,10 +103,13 @@ const FaceCare = () => {
                             </ul>
                         }
                     </li>
-                    {/* <hr/> */}
                 </ul>
             </section>
-
+            ) : 
+            (<div className='spinner'>
+            <Spinner animation="border" role="status" className='loader'></Spinner>    
+            </div>)}
+            
             <BodyFace category='face' radio={checked}/>
         </div>
     );
