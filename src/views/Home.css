@@ -48,3 +48,11 @@ article {
     background-color: rgba(243, 221, 124, 0.678);
 }
 
+@media (max-width: 600px) {
+    .banner-art {
+        height: 10px;
+        opacity: 0;
+    }
+
+    
+}

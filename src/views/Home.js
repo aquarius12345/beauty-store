@@ -29,7 +29,7 @@ const Home = () => {
     const choosen = products.filter(el => el.rating === 4);
 
     return (
-        <div>
+        <div className='home'>
            <Caroussel/>
            <Slider data={products} title={'New In'} spantext={'NEW'}/>
            <div className='banner'>
@@ -43,7 +43,7 @@ const Home = () => {
                </article>
            </div>
            <Slider data={bestSell} title={'Selling Fast'}/>
-           <Slider data={choosen} title={'Choosen for you'}/>
+           <Slider data={choosen} title={'Choosen for you'} />
         </div>
     );
 };

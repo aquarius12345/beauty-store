@@ -53,7 +53,7 @@ const MyList = (props) => {
                                     <p>Price:${el.price / 100 + '.00'}</p>
                                 </div>
                                 <div className='desc-btn'>
-                                    <button onClick={()=> moveToCart(el._id)}>Add To Cart</button>
+                                    <button onClick={()=> moveToCart(el._id)}>Add to Cart</button>
                                     <button id='delete-btn' onClick={()=> deleteFav(el._id)}>Delete</button>
                                 </div>   
                             </li>

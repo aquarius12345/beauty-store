@@ -56,7 +56,7 @@ const Signup = () => {
         <>
             <div className='signup'>
                 <form onSubmit={handleSubmit}>
-                    <h1>Create an Account</h1>
+                    <h2>Create an Account</h2>
                     <p>Did you know? When you create an account, you get access to cool stuff</p>
                     <input type='text' name='name' placeholder='Username' onChange={handleInputChange}/>
                     <input type='email' name='email' placeholder='Email adress' onChange={handleInputChange}/>
@@ -66,7 +66,7 @@ const Signup = () => {
                 </form>
 
                 <form onSubmit={loginSubmit}>
-                    <h1>Log In</h1>
+                    <h2>Login</h2>
                     <p>Welcome back! Login into your account here:</p>
                     <input type='email' placeholder='Email adress' name='email' onChange={handleLoginInput}/>
                     <input type='password' placeholder='Password' name='password' onChange={handleLoginInput}/>

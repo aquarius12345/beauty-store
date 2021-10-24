@@ -1,16 +1,14 @@
 .signup {
-    /* background-image: url("https://i.pinimg.com/originals/f7/86/33/f78633fc96f13c93f387aec403bb805e.jpg"); */
-    background-image: url('https://image.freepik.com/vetores-gratis/design-de-papel-de-parede-rosa-redondo-sem-costura-padrao_53876-118674.jpg');
+    background: linear-gradient(to right, #dd5e89, #f7bb97);
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     padding-top: 50px;
     font-size: 0.8rem;
-    height: 90vh;
-    /* background-size: cover; */
+    height: 80vh;
 }
 
-.signup h1 {
+.signup h2 {
     margin: 50px;
 }
 
@@ -19,7 +17,9 @@
     height: 500px;
     display: flex;
     flex-direction: column;
-    background-color: white; 
+    background-color: white;
+    border-radius: 10px; 
+    margin-top: 30px;
 }
 
 .signup input {

@@ -20,6 +20,11 @@
 .header h3 {
     font-family: 'Lexend Deca';
     font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.header a:hover {
+    color: pink;
 }
 
 .header ul {
@@ -149,7 +154,7 @@
     background-color: red;
     color: white;
     position: absolute;
-    margin-left: 222px;
+    margin-left: 198px;
     margin-top: -5px;
 }
 
@@ -161,6 +166,83 @@
 
 .check {
     text-align: center;
+}
+
+/* -----Sidebar menu---- */
+.hamburguer {
+    opacity: 0;
+}
+
+.icon {
+    margin-left: 20px;
+}
+
+.nav-menu {
+    background-color: black;
+    width: 250px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 850ms;
+    z-index: 950;
+}
+
+.nav-menu.active {
+    left: -100;
+    /* transition: 350ms; */
+}
+
+
+/* ----------Mobile-------- */
+@media (max-width: 600px){
+    .header {
+        font-size: 0.8rem;
+        height: 150px; 
+        background-color: aliceblue;
+    }
+
+    .header h3 {
+        font-size: 1rem;
+        margin-left: 10px;
+        margin-top: -70px;
+    }
+
+    .hamburguer {
+        opacity: 1;
+        margin-right: 10px;
+    }
+
+    .header ul {
+        position: absolute;
+        z-index: 300;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+        transition: 350ms;
+        height: 100%;
+    }
+
+    .nav-menu-items li {
+        list-style: none;
+    }
+
+    .nav-menu-items {
+        text-align: start;
+        line-height: 5;
+    }
+
+    .nav-menu-items a {
+        color: white;
+        text-decoration: none;   
+    }
+
+    .navbar-toggle {
+        margin-left: 160px;
+    }
 }
 
 

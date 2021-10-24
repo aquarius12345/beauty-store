@@ -5,18 +5,18 @@ import { BsPersonCircle } from 'react-icons/bs';
 import { HiOutlineHeart } from 'react-icons/hi';
 import { BsHandbag } from 'react-icons/bs';
 import { GrFormClose } from 'react-icons/gr';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { AiOutlineClose } from 'react-icons/ai';
 import Navbar from './Navbar';
 import SearchBar from './SearchBar';
 import api from '../configs/api';
 
 
 const Header = (props) => {
-    
     const [user, setUser] = useState(localStorage.getItem('userName'));
     const [cart, setCart] = useState([]);
     const [cartToggle, setCartToggle] = useState(false);
-    //console.log('cart toggle', cartToggle)
-    //console.log('cart in header', cart)
+    const [sidebar, setSidebar] = useState(false);
 
     useEffect(() => {
         setCart(props.cartData);   
@@ -38,8 +38,7 @@ const Header = (props) => {
     return (
         <div>
             <div className='header'>
-                {/* <h3><Link to='/'>BEAUTYSTORE</Link></h3> */}
-                <Link to='/'><img src='https://res.cloudinary.com/dgzbojudn/image/upload/v1634861444/F27670FC-D4C8-4043-9538-9E8DFFC69C56_zhayju.jpg' alt='beautystore'/></Link>
+                <h3><Link to='/'>BEAUTYSTORE</Link></h3>
                 <SearchBar data={props.data}/>
                 <ul>
                     <li className='sign h-icon'>
@@ -59,9 +58,24 @@ const Header = (props) => {
                     </li>
 
                     <li>{user && <Link to='/logout' className='h-icon'>Logout</Link>}</li>
+                    <GiHamburgerMenu className='hamburguer' onClick={()=>setSidebar(!sidebar)}/>
                 </ul>
             </div>
             <Navbar />
+
+            {/* -------Hamburguer Menu------ */}
+            <div className={sidebar ? 'nav-menu active' : 'nav-menu'} >
+                <ul className='nav-menu-items' onClick={()=>setSidebar(!sidebar)}>
+                    <li className='navbar-toggle'>
+                        <AiOutlineClose color='white' size='10'/>
+                    </li>
+                    <li><Link to='/store/best-sellers'>Best Sellers</Link></li>
+                    <li><Link to='/bodycare'>Body Care</Link></li>
+                    <li><Link to='/face-care'>Face Care</Link></li>
+                    <li><Link to='/store/all'>Shop All</Link></li>
+                    <li><Link to='/about'>About</Link></li>
+                </ul>
+            </div>
 
             {/* -----------Cart Menu-------- */}
             {cartToggle ? <>
@@ -104,8 +118,7 @@ const Header = (props) => {
                 ) : (
                     <p style={{margin: '0 auto'}}>Please Login to add in Cart</p>
                 )};
-                
-                     
+                         
             </div>
             </> : ''}
             

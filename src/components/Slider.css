@@ -1,78 +1,120 @@
 .slider-card {
-    width: 9vw;
-    font-size: 0.8rem;
-    margin-left: 25px;
-    position: relative;   
+  width: 9vw;
+  font-size: 0.8rem;
+  margin-left: 25px;
+  position: relative;   
 }
 
 .slider-card img {
-    width: 8vw;
-    height: 190px;
-    object-fit: contain;
+  width: 8vw;
+  height: 190px;
+  object-fit: contain;
 }
 
 .p {
-    width: 30px;
-    height: 13px;
-    background-color: black;
-    color: white;
-    font-size: 0.7rem;
-    font-weight: bold;
-    margin-right: 90px;
+  width: 30px;
+  height: 13px;
+  background-color: black;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  margin-right: 90px;
 }
 
 .slider-list {
-    display: flex;
-    align-items: baseline;
+  display: flex;
+  align-items: baseline;
 }
 
 .slider h2 {
-    margin-top: 35px;
+  margin-top: 35px;
 }
 
 .rec {
-    width: 60vw;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-    margin: 0 auto;
-    position: relative;
-    margin-top: 18px;
+  width: 60vw;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 18px;
 }
 
 .rec::-webkit-scrollbar {
-    width: 2px;
-    display: none;
+  width: 2px;
+  display: none;
 }
 
 .slider-card h6 {
-    font-weight: bold;
-    margin-bottom: 0;
+  font-weight: bold;
+  margin-bottom: 0;
 }
 
-  .slider-buttons {
-    position: absolute;
-    margin-top: -200px;
-  }
+.slider-buttons {
+  position: absolute;
+  margin-top: -200px;
+}
 
-  .btn-left {
-    position: relative;
-    left: 18vw;
-    font-size: 2rem;
-    background-color: transparent;
-    border-style: none;
-    color: rgb(172, 170, 170);
-  }
+.btn-left {
+  position: relative;
+  left: 18vw;
+  font-size: 2rem;
+  background-color: transparent;
+  border-style: none;
+  color: rgb(172, 170, 170);
+}
 
-  .btn-right {
-    position: relative;
-    left: 78vw;
-    font-size: 2rem;
-    background-color: transparent;
-    border-style: none;
-    color: rgb(172, 170, 170);
-  }
+.btn-right {
+  position: relative;
+  left: 78vw;
+  font-size: 2rem;
+  background-color: transparent;
+  border-style: none;
+  color: rgb(172, 170, 170);
+}
 
-  .slider-list a {
-    color: black;
-    text-decoration: none;
+.slider-list a {
+  color: black;
+  text-decoration: none;
+}
+
+
+
+  /*----------- Mobile------------ */
+  @media (max-width: 600px) {
+    .slider {
+      width: 100vw;
+      margin: -150px auto 0px;
+      padding: 0px 0px 130px;
+      background-color: thistle;
+    }
+
+    .slider-card p {
+      font-size: 0.7rem;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .rec {
+      width: 55vw; 
+      background-color: aliceblue;
+    }
+
+    .slider-card {
+      width: 200px;
+      margin: 0 5px;
+    }
+
+    .slider-card img {
+      width: 200px;
+      height: 300px;
+      object-fit: contain;
+    }
+
+    .btn-right {
+      margin-left: -20px;
+    }
+
+    .btn-left {
+      margin-left: -30px;
+    }
   }

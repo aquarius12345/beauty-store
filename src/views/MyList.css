@@ -8,7 +8,7 @@
     margin: 0 auto;
     padding: 20px;
     margin-bottom: 20px;
-    background-color: rgb(247, 250, 253);
+    background-color: rgb(236, 233, 233);
 }
 
 .my-list img {
@@ -29,7 +29,8 @@
     justify-content: space-between;
     font-size: 0.9rem;
     background-color: white;
-    margin-bottom: 12px;   
+    margin-bottom: 12px; 
+    padding: 15px;  
 }
 
 .my-list a {
@@ -47,21 +48,26 @@
 }
 
 .desc-btn {
-    width: 20%;
+    width: 22%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
 .desc-btn button {
     width: 70%;
-    height: 40px;
+    height: 35px;
     background-color: red;
     color: white;
     border-style: none;
     border-radius: 5px;
-    font-weight: bold;    
+    font-weight: bold;
+    margin-bottom: 5px;    
+}
+
+.desc-btn button:hover {
+    opacity: 0.6;
 }
 
 #delete-btn {

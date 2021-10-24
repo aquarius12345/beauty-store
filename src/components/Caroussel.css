@@ -14,4 +14,14 @@
     font-size: 1.2em;
 }
 
+@media (max-width: 600px) {
+    .caroussel {
+        width: 100vw;
+        margin-top: -200px;
+        padding-top: 20px;
+    };
+   
+};
+
+
 

@@ -29,7 +29,6 @@ const Slider = (props) => {
             <div className='rec' ref={rec}>
                     <div className='slider-list'>
                         {newData.map(el => 
-                        
                         <div className='slider-card'>
                             <Link to={`product-detail/${el._id}`} key={el._id}>
                             <img src={el.image_one} alt='product-img'/>

@@ -28,6 +28,13 @@ const BestSellers = (props) => {
         };  
     };
 
+    const heart = '♥';
+    const emptyheart = '♡'
+
+    const rating = (number) => {
+        return heart.repeat(number).padEnd(5, emptyheart);
+    }
+
     const filtered = products.filter(el => el.rating === 5);
 
     return (
@@ -43,13 +50,13 @@ const BestSellers = (props) => {
                     <div>
                         <ul className='the-ul'>
                             {filtered.map(el => <>
-                            <li key={el._id} className='prd-card'> 
+                            <li key={el._id} className='prd-card' id='showall-card'> 
                             <Link to={`/product-detail/${el._id}`}>
                             <img src={el.image_one} alt={el.name}/>
                             <div>
                                 <p style={{fontWeight: 'bold'}}>{el.brand}</p>
                                 <p style={{fontSize: '0.9rem'}}>{el.name}</p>
-                                <p>{el.rating}</p>
+                                <p>{rating(el.rating)}</p>
                                 <p style={{fontWeight: 'bold'}}>{'$'+ (el.price / 100) + '.00'}</p>
                             </div>
                             </Link>

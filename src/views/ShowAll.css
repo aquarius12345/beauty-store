@@ -4,12 +4,8 @@
 
 .showall h3 {
     margin-top: 50px;
+    margin-bottom: 0;
     color: white;
-}
-
-.bg-img img {
-    width: 30%;
-    height: 150px;
 }
 
 .showall .spinner {
@@ -32,4 +28,20 @@
 .products-part h3 {
     margin-top: 50px;
     color: black;
+}
+
+#showall-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 350px;
+    box-shadow: 0 0 0.3em rgb(144, 150, 156);
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+}
+
+#showall-card img {
+    width: 70%;
 }

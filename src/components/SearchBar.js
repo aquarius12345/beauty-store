@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './SearchBar.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 import api from '../configs/api';
 
@@ -9,8 +9,9 @@ const SearchBar = () => {
     const [products, setProducts] = useState([]);
     const [inputValue, setInputValue] = useState('');
     const [filteredList, setFilteredList] = useState([]);
-    // const [open, setOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
 
+    //const ref = useRef();
 
     const handleChange = (e) => {
         setInputValue(e.target.value);
@@ -36,14 +37,28 @@ const SearchBar = () => {
 
     }, [inputValue]);
 
+    let menuRef = useRef()
 
+    useEffect(() => {
+        let handler = (event) => {
+            if(!menuRef.current.contains(event.target)) {
+                setIsOpen(true);
+            }
+        };
+        document.addEventListener('mousedown', handler);
+
+        return () => {
+            document.removeEventListener('mousedown', handler);
+        };
+    });
 
     return ( 
         <div>
-            <div className='search'>
+            <div className='search' ref={menuRef}>
                 <AiOutlineSearch size='22' className='search-icon'/>
-                <input type='search' value={inputValue} placeholder='Search' onChange={handleChange} />
-               
+                <input type='search' value={inputValue} placeholder='Search' onChange={handleChange} onClick={()=>setIsOpen(!isOpen)}/>
+                {isOpen ? '' :
+                (
                     <ul>
                     {inputValue !== '' ? filteredList.slice(0, 7).map(el => 
                     <li key={el._id}>
@@ -51,7 +66,7 @@ const SearchBar = () => {
                         <Link to={`/product-detail/${el._id}`}>{el.name.slice(0, 40)}...</Link>
                     </li>): null}
                     </ul>
-                
+                )}
             </div>  
         </div>
     );

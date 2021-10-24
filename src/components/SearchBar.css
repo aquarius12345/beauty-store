@@ -13,8 +13,8 @@
 }
 
 .search input {
-    width: 85%;
-    margin: 8px 0px 0px 40px;
+    width: 80%;
+    margin: 8px 0px 0px 25px;
     border-style: none;
     outline: none;
     background-color: transparent;
@@ -28,7 +28,7 @@
 .search-icon {
     position: absolute;
     top: 8px;
-    left: 20px;
+    left: 12px;
 }
 
 .search ul {
@@ -57,3 +57,14 @@
     background-color: rgb(241, 241, 245);
 }
 
+
+/* ------Mobile-------- */
+@media (max-width: 600px){
+    .search {
+        width: 230px;
+        position: absolute;
+        top: 50;
+        left: 0;
+        margin-top: 40px;
+    }
+}
