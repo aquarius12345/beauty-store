@@ -4,14 +4,14 @@
   font-size: 0.8rem;
   margin-top: 5px;
   margin-left: 2px;
-  margin-right: 20px;
+  margin-right: 10px;
   position: relative; 
   box-shadow: 0 0 0.3em rgb(144, 150, 156);
   padding: 10px; 
 }
 
 .slider-card img {
-  width: 9vw;
+  width: 8vw;
   height: 200px;
   object-fit: contain;
 }
@@ -35,7 +35,7 @@
 }
 
 .rec {
-  width: 60vw;
+  width: 60.5vw;
   height: 300px;
   overflow-x: scroll;
   scroll-behavior: smooth;
@@ -79,7 +79,7 @@
 .btn-right {
   width: 40px;
   position: relative;
-  left: 78vw;
+  left: 77.2vw;
   font-size: 2rem;
   background-color: white;
   border-style: none;

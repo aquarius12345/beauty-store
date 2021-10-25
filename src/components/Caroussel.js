@@ -35,7 +35,7 @@ const Caroussel = () => {
                         <img
                         className="d-block w-100"
                         id="caroussel"
-                        src="https://www.moodiedavittreport.com/wp-content/uploads/2021/06/Screenshot-2021-06-09-at-10.32.49.png"
+                        src="https://i.pinimg.com/originals/73/ac/92/73ac92991e5ab737e4233cd0153bb1a9.jpg"
                         alt="caudalie"
                         />
 

@@ -56,20 +56,6 @@ const Navbar = () => {
                                 </div>
                             </div>
                         </>)}
-                        {/* <div className='links'>
-                            <h6>By Skin Type</h6>
-                            <Link to='/face-care?name=oily'>Oily Skin</Link>
-                            <Link to='/face-care?name=dry'>Dry Skin</Link>
-                            <Link to='/face-care?name=sensitive'>Sensitive Skin</Link>
-                            <Link to='/face-care?name=all'>All Skin Types</Link>
-                        </div>
-                        <div>
-                            <Link to='/face-care' style={{color:'black'}}><h5>Shop all Face Care</h5></Link>
-                            <div className='nav-img'>    
-                                <img src='https://res.cloudinary.com/dgzbojudn/image/upload/v1633715170/cosmetics-products-advertising_1284-32872_ob8mp6.jpg' alt='ceramidin'/>
-                                <img src='https://res.cloudinary.com/dgzbojudn/image/upload/v1633715170/beige-color-make-up-cosmetics-set-with-cream_1268-15446_piq5jw.jpg' alt='cera'/>
-                            </div>
-                        </div> */}
                         
                 </div>
                 <Link to='/store/all'>SHOP ALL</Link>

@@ -46,6 +46,7 @@
     padding: 50px 100px;
     opacity: 0;
     visibility: hidden;
+    transition: 200ms;
 }
 
 .links h6 {
