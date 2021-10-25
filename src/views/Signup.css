@@ -4,18 +4,20 @@
     flex-direction: row;
     justify-content: space-evenly;
     padding-top: 50px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     height: 80vh;
 }
 
 .signup h2 {
     margin: 50px;
+    font-weight: 700;
 }
 
 .signup form {
     width: 40vw;
-    height: 500px;
+    height: 400px;
     display: flex;
+    justify-content: space-around;
     flex-direction: column;
     background-color: white;
     border-radius: 10px; 
@@ -29,11 +31,12 @@
     margin-bottom: 18px;
 }
 
-#signup-btn {
-    width: 150px;
+.signup #signup-btn {
+    width: 170px;
     height: 40px;
     margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 10px;
+    margin-bottom: 40px;
     color: white;
     background-color: black;
     font-size: 1rem;
@@ -48,9 +51,10 @@
 
 #login-btn {
     width: 150px;
-    height: 40px;
+    height: 45px;
     margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 10px;
+    margin-bottom: 40px;
     color: white;
     background-color: black;
     border-style: none;

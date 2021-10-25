@@ -74,8 +74,7 @@ const Signup = () => {
                     <button id='login-btn' type='submit'>Login</button>
                 </form>
             </div>
-        </>
-        
+        </>    
     );
 };
 
