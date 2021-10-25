@@ -13,6 +13,7 @@
     margin-top: 20px;
     background-color: black;
     position: relative;   
+    font-size: 1rem;
 }
 
 .navbar a {
@@ -46,7 +47,7 @@
     padding: 50px 100px;
     opacity: 0;
     visibility: hidden;
-    transition: 200ms;
+    transition: 260ms;
 }
 
 .links h6 {

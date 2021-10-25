@@ -15,7 +15,7 @@ const Navbar = () => {
                 <div className='dropdown'>
                     <Link to='/bodycare' onClick={()=>setToggleBody(!toggleBody)}>BODYCARE</Link>
                     {toggleBody ? '' : (<>
-                         <div className='dropdown-content'>
+                     <div className='dropdown-content'>
                          <div className='links'>
                              <h6>By Skin Type</h6>
                              <Link to='/bodycare?name=oily'>Oily Skin</Link>
