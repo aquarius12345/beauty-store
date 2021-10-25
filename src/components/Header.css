@@ -178,8 +178,7 @@
 }
 
 .nav-menu {
-    background-color: black;
-    width: 250px;
+    width: 260px;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -187,12 +186,12 @@
     top: 0;
     left: -100%;
     transition: 850ms;
-    z-index: 950;
+    z-index: 959;
+    background-color: rgb(243, 243, 243);
 }
 
 .nav-menu.active {
     left: -100;
-    /* transition: 350ms; */
 }
 
 
@@ -232,11 +231,11 @@
 
     .nav-menu-items {
         text-align: start;
-        line-height: 5;
+        line-height: 2;
     }
 
     .nav-menu-items a {
-        color: white;
+        color: black;
         text-decoration: none;   
     }
 

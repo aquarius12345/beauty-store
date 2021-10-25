@@ -63,16 +63,21 @@ const Header = (props) => {
             </div>
             <Navbar />
 
-            {/* -------Hamburguer Menu------ */}
+            {/* -------Sidebar Menu------ */}
             <div className={sidebar ? 'nav-menu active' : 'nav-menu'} >
                 <ul className='nav-menu-items' onClick={()=>setSidebar(!sidebar)}>
                     <li className='navbar-toggle'>
-                        <AiOutlineClose color='white' size='10'/>
+                        <AiOutlineClose size='10'/>
                     </li>
-                    <li><Link to='/store/best-sellers'>Best Sellers</Link></li>
+                    <h4 style={{marginTop: '30px'}}><Link to='/'>BEAUTYSTORE</Link></h4>
+                    <li style={{marginTop: '50px'}}><Link to='/store/best-sellers'>Best Sellers</Link></li>
+                    <hr/>
                     <li><Link to='/bodycare'>Body Care</Link></li>
+                    <hr/>
                     <li><Link to='/face-care'>Face Care</Link></li>
+                    <hr/>
                     <li><Link to='/store/all'>Shop All</Link></li>
+                    <hr/>
                     <li><Link to='/about'>About</Link></li>
                 </ul>
             </div>

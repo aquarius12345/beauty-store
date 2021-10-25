@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Slider.css';
-import { BsChevronCompactRight, BsChevronCompactLeft } from 'react-icons/bs';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 
@@ -26,14 +25,33 @@ const Slider = (props) => {
     return (
         <div className='slider'>
             <h2>{props.title}</h2>
-            <div className='rec' ref={rec}>
+            {newData && (<>
+                <div className='rec' ref={rec}>
                     <div className='slider-list'>
                         {newData.map(el => 
                         <div className='slider-card'>
                             <Link to={`product-detail/${el._id}`} key={el._id}>
                             <img src={el.image_one} alt='product-img'/>
                             <h6>{el.brand}</h6>
-                            <p>{el.name}</p>
+                            <p>{el.name.slice(0, 40)}</p>
+                            </Link>
+                        </div>
+                        )}
+                    </div>       
+                </div>
+                <div className='slider-buttons'>
+                    <button className='btn-left' onClick={handleLeftClick}><FiChevronLeft/></button>
+                    <button className='btn-right' onClick={handleRightClick}><FiChevronRight/></button>
+                </div>
+            </>)}
+            {/* <div className='rec' ref={rec}>
+                    <div className='slider-list'>
+                        {newData.map(el => 
+                        <div className='slider-card'>
+                            <Link to={`product-detail/${el._id}`} key={el._id}>
+                            <img src={el.image_one} alt='product-img'/>
+                            <h6>{el.brand}</h6>
+                            <p>{el.name.slice(0, 40)}</p>
                             </Link>
                         </div>
                         )}
@@ -42,7 +60,7 @@ const Slider = (props) => {
             <div className='slider-buttons'>
                 <button className='btn-left' onClick={handleLeftClick}><FiChevronLeft/></button>
                 <button className='btn-right' onClick={handleRightClick}><FiChevronRight/></button>
-            </div>
+            </div> */}
         </div>
     );
 };

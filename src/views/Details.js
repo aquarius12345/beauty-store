@@ -8,6 +8,7 @@ const Details = (props) => {
     const [product, setProduct] = useState({});
     const [qty, setQty] = useState('1');
     const [toggleImg, setToggleImg] = useState(false);
+    const [popHeart, setPopHeart] = useState(false);
     
     useEffect(() => {
         oneProduct();
@@ -41,6 +42,7 @@ const Details = (props) => {
             const result = await api.post(`/cart/${el}`,{qty});
             //console.log('add to cart', result)
             props.getCart();
+            setPopHeart(true);
         }catch(error){
             console.error(error);
         }
@@ -51,21 +53,25 @@ const Details = (props) => {
         <div className='details'>
         {product ? <>
            <div className='det-container'>
-               <div className='btnn-container'>
+                <div className='btnn-container'>
                    <img src={product.image_one} alt={product.name} onClick={() => setToggleImg(false)}/>
                    <img src={product.image_two} alt="second" onClick={() => setToggleImg(true)}/>
-               </div>
+                </div>
                
-               <div className='img-toggle'>
-               {!toggleImg ?    
-                <img src={product.image_one} className='img-size' alt={product.name}/>
-                :
-                <img src={product.image_two} className='img-size' alt="second-image"/>
+                <div className='img-toggle'>
+                {!toggleImg ?    
+                  <img src={product.image_one} className='img-size' alt={product.name}/>
+                  :
+                  <img src={product.image_two} className='img-size' alt="second-image"/>
                 }
-               </div>
+                </div>
                
-
-                <button className='heart' onClick={()=> props.add(product._id)}>♡</button>
+                <div>
+                    <div className={popHeart ? 'heart fill-color' : 'heart'} onClick={()=> props.add(product._id)}></div>
+                    <div className={popHeart ? 'animation-heart animation' : 'animation-heart'}></div>
+                    {/* <button className='heart' onClick={()=> props.add(product._id)}>♡</button> */}
+                </div>
+                
                
                 <div className='description-d'>
                     <h3>{product.brand}</h3>

@@ -18,7 +18,7 @@ const Review = (props) => {
 
     useEffect(() => {
         getReviews();
-    }, [])
+    },[]);
 
     const getReviews = async() => {
         try {
@@ -99,8 +99,7 @@ const Review = (props) => {
                         </>)
                     }
                     </>)}          
-                </div>            
-                
+                </div>                
             </div>
             
         </div>

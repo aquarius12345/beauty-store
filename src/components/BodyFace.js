@@ -33,7 +33,7 @@ const BodyFace = (props) => {
 
     useEffect(() => {
         getProducts();   
-    }, []);
+    },[]);
 
     const getProducts = async() => {
             try {

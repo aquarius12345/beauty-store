@@ -47,7 +47,7 @@ const CartPage = (props) => {
                 {cart.map(el => <>
                     <hr/>
                     <li key={el.product_id._id}>
-                        <img src={el.product_id.image_one} alt='products-image'/>
+                        <img src={el.product_id.image_one} alt='products'/>
                         <div className='p-list'>
                             <p style={{fontWeight: 'bold'}}>{el.product_id.brand}</p>
                             <Link to={`/product-detail/${el.product_id._id}`}><p>{el.product_id.name}</p></Link> 

@@ -1,24 +1,28 @@
 .slider-card {
-  width: 9vw;
+  width: 12vw;
+  height: 280px;
   font-size: 0.8rem;
-  margin-left: 25px;
-  position: relative;   
+  margin-top: 5px;
+  margin-left: 2px;
+  margin-right: 20px;
+  position: relative; 
+  box-shadow: 0 0 0.3em rgb(144, 150, 156);
+  padding: 10px; 
 }
 
 .slider-card img {
-  width: 8vw;
-  height: 190px;
+  width: 9vw;
+  height: 200px;
   object-fit: contain;
 }
 
-.p {
-  width: 30px;
-  height: 13px;
-  background-color: black;
-  color: white;
+.slider-card p {
+  width: 100%;
+  height: 30px;
+  color: black;
   font-size: 0.7rem;
-  font-weight: bold;
   margin-right: 90px;
+  text-align: center;
 }
 
 .slider-list {
@@ -32,11 +36,13 @@
 
 .rec {
   width: 60vw;
+  height: 300px;
   overflow-x: scroll;
   scroll-behavior: smooth;
   margin: 0 auto;
   position: relative;
   margin-top: 18px;
+  margin-bottom: 10px;
 }
 
 .rec::-webkit-scrollbar {
@@ -51,25 +57,39 @@
 
 .slider-buttons {
   position: absolute;
-  margin-top: -200px;
+  margin-top: -185px;
 }
 
 .btn-left {
+  width: 40px;
   position: relative;
-  left: 18vw;
+  left: 16vw;
   font-size: 2rem;
-  background-color: transparent;
+  background-color: white;
   border-style: none;
   color: rgb(172, 170, 170);
+  box-shadow: 0 0 0.2em rgb(144, 150, 156);
+  border-radius: 10px;
+}
+
+.btn-left:hover {
+  background-color: rgb(240, 240, 240);
 }
 
 .btn-right {
+  width: 40px;
   position: relative;
   left: 78vw;
   font-size: 2rem;
-  background-color: transparent;
+  background-color: white;
   border-style: none;
   color: rgb(172, 170, 170);
+  box-shadow: 0 0 0.2em rgb(144, 150, 156);
+  border-radius: 10px;
+}
+
+.btn-right:hover {
+  background-color: rgb(240, 240, 240);
 }
 
 .slider-list a {
@@ -84,29 +104,33 @@
     .slider {
       width: 100vw;
       margin: -150px auto 0px;
-      padding: 0px 0px 130px;
-      background-color: thistle;
+      padding: 0px 0px 130px;  
     }
 
     .slider-card p {
       font-size: 0.7rem;
       width: 80%;
-      margin: 0 auto;
+      margin: 0 auto; 
     }
 
     .rec {
-      width: 55vw; 
-      background-color: aliceblue;
+      width: 55vw;
+      height: 330px; 
     }
 
     .slider-card {
       width: 200px;
+      height: 280px;
       margin: 0 5px;
+      margin-top: 0;
+      padding-top: 0;
+      box-shadow: none;
     }
 
     .slider-card img {
-      width: 200px;
+      width: 150px;
       height: 300px;
+      margin-top: 0;
       object-fit: contain;
     }
 
@@ -116,5 +140,9 @@
 
     .btn-left {
       margin-left: -30px;
+    }
+
+    .slider-card h6 {
+      margin-top: -40px;
     }
   }
