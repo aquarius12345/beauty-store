@@ -2,17 +2,18 @@
     display: flex;
     margin: 0 10vw;
     margin-bottom: 250px;
-    /* background-color: hotpink; */
+    font-size: 1rem;
 }
 
 .filter-list {
     width: 15vw;
     margin-top: 50px;
-    /* background-color: khaki;     */
+    font-size: 1rem;
 }
 
-.filter-list h2 {
+.filter-list h3 {
     margin-bottom: 50px;
+    font-weight: bold;
 }
 
 .list {
@@ -47,11 +48,6 @@
 
 .filter-list ul {
     text-align: start;
-}
-
-#bodycare-link {
-    font-size: 1.5rem;
-    font-weight: bold;
 }
 
 .rating-check {

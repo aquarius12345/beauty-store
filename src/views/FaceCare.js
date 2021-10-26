@@ -46,7 +46,7 @@ const FaceCare = () => {
             {loading ? (
                 <section className='filter'>
                 <ul className='filter-list'>
-                    <Link to='/face-care' id='bodycare-link'>Face Care</Link>
+                    <Link to='/face-care'><h3>Face Care</h3></Link>
                     <h6>Filters</h6>
                     <li>
                         <div className='list'>

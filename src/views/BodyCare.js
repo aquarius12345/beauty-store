@@ -46,9 +46,9 @@ const BodyCare = () => {
         // rendering Filters
         <div className='page-margin'>
             {loading ? (
-                 <section className='filter'>
+             <section className='filter'>
                  <ul className='filter-list'>
-                     <Link to='/bodycare' id='bodycare-link'>Body Care</Link>
+                     <Link to='/bodycare'><h3>Body Care</h3></Link>
                      <h6>Filters</h6>
                      <li>
                          <div className='list'>

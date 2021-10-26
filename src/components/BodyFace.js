@@ -102,10 +102,10 @@ const BodyFace = (props) => {
                     <Link to={`/product-detail/${el._id}`}>
                     <img src={el.image_one} alt='body product'/>
                     <div>
-                        <p style={{fontWeight: 'bold'}}>{el.brand}</p>
-                        <p style={{fontSize: '0.9rem'}}>{el.name}</p>
+                        <h6>{el.brand}</h6>
+                        <p id='the-p'>{el.name}</p>
                         <p>{rating(el.rating)}</p>
-                        <p style={{fontWeight: 'bold'}}>{'$'+ (el.price / 100) + '.00'}</p>
+                        <p>{'$'+ (el.price / 100) + '.00'}</p>
                     </div>
                     </Link>
                 </li>))
