@@ -2,6 +2,7 @@
     margin: 0 15vw;
     display: flex;
     flex-direction: column; 
+    font-size: 1rem;
 };
 
 .det-container .img-size {
@@ -15,6 +16,7 @@
     align-items:flex-start;
     margin-top: 20px;
     padding-top: 30px;
+    font-size: 0.9rem;
 }
 
 .description-d {
@@ -68,6 +70,7 @@
 
 .high {
     text-align: start;
+    font-size: 1rem;
 }
 
 .btnn-container {

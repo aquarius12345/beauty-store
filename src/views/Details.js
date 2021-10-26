@@ -78,10 +78,10 @@ const Details = (props) => {
                     <h6>{product.name}</h6>
                     <span>{rating(product.rating)} {product.rating + '.0'}</span>
                     <p style={{fontWeight:'bold'}}>${product.price / 100 + '.00'}</p>
-                    <p>{product.description}</p>
+                    <p>{product.description}</p> 
                     <p style={{fontWeight:'bold'}}>Skin type: {product.skin_type}</p>
                     <p style={{fontWeight:'bold'}}>Size: {product.size}</p>
-                    <span style={{fontSize: '0.9rem'}}>Qty:</span>
+                    <span>Qty:</span>
                     <input type='number' onChange={handleInput} value={qty}></input>
                     <button onClick={()=>addToCart(product._id)}>ADD TO BAG</button>
                 </div>   
