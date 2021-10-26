@@ -53,7 +53,7 @@ const ShowAll = (props) => {
                                 <img src={el.image_one} alt='body product'/>
                                 <div>
                                     <p style={{fontWeight: 'bold'}}>{el.brand}</p>
-                                    <p style={{fontSize: '0.8rem'}}>{el.name}</p>
+                                    <p className='the-p'>{el.name}</p>
                                     <p>{rating(el.rating)}</p>
                                     <p style={{fontWeight: 'bold'}}>{'$'+ (el.price / 100) + '.00'}</p>
                                 </div>

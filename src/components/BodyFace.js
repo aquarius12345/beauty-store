@@ -103,7 +103,7 @@ const BodyFace = (props) => {
                     <img src={el.image_one} alt='body product'/>
                     <div>
                         <h6>{el.brand}</h6>
-                        <p id='the-p'>{el.name}</p>
+                        <p className='the-p'>{el.name}</p>
                         <p>{rating(el.rating)}</p>
                         <p>{'$'+ (el.price / 100) + '.00'}</p>
                     </div>
