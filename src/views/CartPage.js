@@ -52,10 +52,10 @@ const CartPage = (props) => {
                             <p style={{fontWeight: 'bold'}}>{el.product_id.brand}</p>
                             <Link to={`/product-detail/${el.product_id._id}`}><p>{el.product_id.name}</p></Link> 
                             <span style={{fontSize:'0.8rem'}}>Price:${el.product_id.price / 100 + '.00'} </span>
-                            {/* <span style={{fontSize:'0.8rem'}}> Qty:{el.qty} </span> */}
+                            
                             <div className='cartpage-btn'>
                                 <input type='number' value={el.qty} onChange={(e)=>handleQty(el.product_id._id, e)}/>
-                                <button className='remove-btn' onClick={()=>removeProduct(el.product_id._id)}><span>Remove</span></button>    
+                                <button className='remove-btn' onClick={()=>removeProduct(el.product_id._id)}>Remove</button>    
                             </div>
                         </div>
 
