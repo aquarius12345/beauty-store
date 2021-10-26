@@ -72,7 +72,6 @@ const Details = (props) => {
                     {/* <button className='heart' onClick={()=> props.add(product._id)}>♡</button> */}
                 </div>
                 
-               
                 <div className='description-d'>
                     <h3>{product.brand}</h3>
                     <h6>{product.name}</h6>
