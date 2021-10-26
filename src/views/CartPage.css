@@ -33,12 +33,20 @@
     font-size: 0.9rem;
 }
 
+.cart-page-btn {
+    color: rgb(29, 29, 218);
+}
+
 .cart-page .remove-btn {
     width: 100px;
     font-size: 0.8rem;
     margin: 10px 0;
     background-color: white;
     border-style: none;
+    color: rgb(29, 29, 218);
+}
+
+.remove-btn {
     color: rgb(29, 29, 218);
 }
 
@@ -58,7 +66,7 @@
 }
 
 .p-list span {
-    font-size: 0.rem;
+    font-size: 0.9rem;
 }
 
 .cartpage-container {

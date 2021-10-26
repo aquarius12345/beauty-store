@@ -51,7 +51,7 @@ const CartPage = (props) => {
                         <div className='p-list'>
                             <p style={{fontWeight: 'bold'}}>{el.product_id.brand}</p>
                             <Link to={`/product-detail/${el.product_id._id}`}><p>{el.product_id.name}</p></Link> 
-                            <span style={{fontSize:'0.8rem'}}>Price:${el.product_id.price / 100 + '.00'} </span>
+                            <span>Price:${el.product_id.price / 100 + '.00'} </span>
                             
                             <div className='cartpage-btn'>
                                 <input type='number' value={el.qty} onChange={(e)=>handleQty(el.product_id._id, e)}/>
