@@ -3,10 +3,10 @@
     display: flex;
     flex-direction: column; 
     font-size: 1rem;
-};
+}
 
 .det-container .img-size {
-    width: 30%;
+    width: 300px;
     height: 30%;
     object-fit: contain;
 }
@@ -126,6 +126,15 @@
     border-radius: 0 0 0 5px;
     transform: rotate(-45deg);
     cursor: pointer;
+    margin-left: 15px;
+}
+
+.heart:hover {
+    background-color: red;
+}
+
+.heart.fill-color {
+    background-color: red;
 }
 
 .heart::before {
@@ -148,62 +157,5 @@
     height: 100%;
     background-color: inherit;
     border-radius: 50%;
-}
-
-.heart.fill-color {
-    background-color: red;
-}
-
-.animation-heart {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20px;
-    height: 20px;
-    background-color: red;
-    transform: rotate(-45deg);
-    border-radius:  0 0 0 5px;
-    cursor: pointer;
-    z-index: 960;
-    margin-left: 458px;
-    visibility: hidden;
-    opacity: 0;
-}
-
-.animation-heart.animation {
-    animation: popup .8s linear;
-    visibility: visible;
-    opacity: 1;
-}
-
-.animation-heart::after {
-    position: absolute;
-    content: "";
-    height: 100%;
-    width: 100%;
-    top: -50%;
-    right: 0;
-    background-color: inherit;
-    border-radius: 50%;
-}
-
-.animation-heart::before {
-    position: absolute;
-    content: "";
-    height: 100%;
-    width: 100%;
-    top: 0;
-    right: -50%;
-    background-color: inherit;
-    border-radius: 50%;
-}
-
-
-@keyframes popup {
-    100% {
-        transform: scale(1.5) rotate(-45deg);
-        opacity: 0;
-    }
 }
 

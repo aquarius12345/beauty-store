@@ -6,11 +6,12 @@ import api from '../configs/api';
 import './ShowAll.css';
 
 
-const ShowAll = () => {
+const Type = (props) => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(false);
-    // const { name } = props.match.params;
-    // console.log('name', name);
+    const [filtered, setFiltered] = useState([]);
+    const { type } = props.match.params;
+    console.log('type', type);
 
     useEffect(() => {
        //console.log('inside use effect')
@@ -35,19 +36,28 @@ const ShowAll = () => {
         return heart.repeat(number).padEnd(5, emptyheart);
     }
 
+    useEffect(() => {
+        filteredProducts();
+    }, [products, type]);
+
+    const filteredProducts = () => {
+        const filteredProduct = products.filter(el => el.category === type.slice(0, 4) && el.type === type.slice(5));
+        setFiltered(filteredProduct);
+    }
+
     return (
         <div className='showall'>
            {loading ? (
                products.length ? <>
                 <section className='products-part'>
-                    <h3>ALL PRODUCTS</h3>
+                    <h3>{type.slice(5).toUpperCase() + 'S'}</h3>
                     <div className='result'>
-                        <p>{'('+ products.length +')'} Results</p> 
+                        <p>{'('+ filtered.length +')'} Results</p> 
                     </div>
 
                     <div>
                         <ul className='the-ul'>
-                            {products.map(el => <>
+                            {filtered.map(el => <>
                             <li key={el._id} className='prd-card' id='showall-card'> 
                                 <Link to={`/product-detail/${el._id}`}>
                                 <img src={el.image_one} alt='body product'/>
@@ -72,8 +82,7 @@ const ShowAll = () => {
            )}
                  
         </div>
-
     );
 };
 
-export default ShowAll;
+export default Type;

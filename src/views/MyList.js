@@ -62,7 +62,7 @@ const MyList = (props) => {
                     </>)
                  : ''}    
             </>)
-             : ( <h5 style={{margin: '50px'}}>Please Login to Add and Watch to Favorites List.</h5> )}
+             : ( <h5 style={{margin: '50px'}}>Please Login to Add to Favorites List.</h5> )}
             </div>
         </div>
     );

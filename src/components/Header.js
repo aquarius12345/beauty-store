@@ -120,9 +120,11 @@ const Header = (props) => {
                             <Link to='/cart' className='checkout-btn' onClick={()=>handletoggle()}>View Bag & Checkout</Link>
                         </div> 
                     </ul>
-                ) : (
+                ) : 
+                (<>
                     <p style={{margin: '0 auto'}}>Please Login to add in Cart</p>
-                )};
+                    <Link to='/signup' className='sign-btn'>Sign In</Link>
+                </>)}
                          
             </div>
             </> : ''}

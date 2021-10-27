@@ -3,26 +3,29 @@ import api from '../configs/api';
 import './Details.css';
 import Review from '../components/Review';
 
+
 const Details = (props) => {
-    console.log('details props', props)
+    //console.log('details props', props)
     const [product, setProduct] = useState({});
     const [qty, setQty] = useState('1');
     const [toggleImg, setToggleImg] = useState(false);
-    const [popHeart, setPopHeart] = useState(false);
-    
-    useEffect(() => {
-        oneProduct();
-    }, [])
+    const [isFavorite, setIsFavorite] = useState(false);
 
     const oneProduct = async() => {
         const result = await api.get(`/product/${props.match.params.id}`);
-        //console.log('result oneProduct', result.data)
+        //console.log('result oneProduct', result.data) 
         setProduct(result.data);
-    }
+        // setIsFavorite(checkIfIsFavorite());
+    };
 
     useEffect(() => {
        oneProduct();
-    }, [props.match.params.id, qty]);
+       //console.log('use effect in details*******');
+    }, [,props.match.params.id, qty, props.list]);
+
+    useEffect(() => {
+        setIsFavorite(checkIfIsFavorite());
+    }, [product]);
 
 
     const heart = '♥';
@@ -42,12 +45,20 @@ const Details = (props) => {
             const result = await api.post(`/cart/${el}`,{qty});
             //console.log('add to cart', result)
             props.getCart();
-            setPopHeart(true);
         }catch(error){
             console.error(error);
         }
     };
 
+    const checkIfIsFavorite = () => {
+        const filtered = props.list.filter(el => el._id === props.match.params.id);
+        //console.log('list inside check', props.list);
+        //console.log('filtered.length', filtered.length > 0);
+        if(filtered.length > 0) {
+            return true;
+        }
+        return false;
+    }; 
 
     return (
         <div className='details'>
@@ -67,9 +78,7 @@ const Details = (props) => {
                 </div>
                
                 <div>
-                    <div className={popHeart ? 'heart fill-color' : 'heart'} onClick={()=> props.add(product._id)}></div>
-                    <div className={popHeart ? 'animation-heart animation' : 'animation-heart'}></div>
-                    {/* <button className='heart' onClick={()=> props.add(product._id)}>♡</button> */}
+                    <div className={isFavorite ? 'heart fill-color' : 'heart'} onClick={()=> props.add(product._id)}></div>   
                 </div>
                 
                 <div className='description-d'>
@@ -86,7 +95,6 @@ const Details = (props) => {
                 </div>   
            </div>
 
-            
             <div className='high'>
                 <hr/>
                 <h4>Highlights</h4>
@@ -104,7 +112,6 @@ const Details = (props) => {
                             
                             <li>
                             { product.ingredients.includes('Parabens') ? (
-            
                                 <>
                                   <img src='https://res.cloudinary.com/dgzbojudn/image/upload/v1634241913/beautyStore/3637654_wizijw.png' alt='paraben free'/>
                                   <span> Paraben Free</span> 

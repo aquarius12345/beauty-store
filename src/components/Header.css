@@ -6,7 +6,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* font-family: sans-serif; */
     border-style: none;
     font-size: 1rem;
     padding-top: 20px;
@@ -166,6 +165,16 @@
 
 .check {
     text-align: center;
+}
+
+.cart-menu .sign-btn {
+    padding: 1.5% 10%;
+    background-color: black;
+    border-radius: 20px;
+    margin: 20px auto;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: white;
 }
 
 /* -----Sidebar menu---- */

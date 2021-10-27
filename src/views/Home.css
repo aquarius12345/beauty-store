@@ -1,7 +1,8 @@
 .banner {
     display: flex;
     justify-content: center;
-    position: relative;  
+    position: relative; 
+    font-size: 1rem; 
 }
 
 .banner img {

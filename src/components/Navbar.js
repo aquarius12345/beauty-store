@@ -17,15 +17,16 @@ const Navbar = () => {
                     {toggleBody ? '' : (<>
                      <div className='dropdown-content'>
                          <div className='links'>
-                             <h6>By Skin Type</h6>
-                             <Link to='/bodycare?name=oily'>Oily Skin</Link>
-                             <Link to='/bodycare?name=dry'>Dry Skin</Link>
-                             <Link to='/bodycare?name=sensitive'>Sensitive Skin</Link>
-                             <Link to='/bodycare?name=all'>All Skin Types</Link>
+                            <h6>By Category</h6>
+                            <Link to='/store/body-cream'>Moisturizers</Link>
+                            <Link to='/store/body-soap'>Cleansers</Link>
+                            <Link to='/store/body-scrub'>Body Scrubs</Link>
+                            <Link to='/store/body-hand'>Handcreams</Link>
+                            <Link to='/bodycare'>Shop All</Link>
                          </div>
  
                          <div>
-                             <Link to='/bodycare' style={{color:'black'}}><h5>Shop all Body Care</h5></Link>
+                             <Link to='/bodycare' style={{color:'black'}}><h5>Shop All Body Care</h5></Link>
                              <div className='nav-img'>    
                                  <img src='https://res.cloudinary.com/dgzbojudn/image/upload/v1633739196/ceramidin_myovxf.png' alt='ceramidin'/>
                                  <img src='https://res.cloudinary.com/dgzbojudn/image/upload/v1633477927/beautyStore/waterbank-lan_d0i2wi.png' alt='cera'/>
@@ -41,14 +42,14 @@ const Navbar = () => {
                         {toggleFace ? '' : (<>
                             <div className='dropdown-content' id='drop-face'>
                                 <div className='links'>
-                                    <h6>By Skin Type</h6>
-                                    <Link to='/face-care?name=oily'>Oily Skin</Link>
-                                    <Link to='/face-care?name=dry'>Dry Skin</Link>
-                                    <Link to='/face-care?name=sensitive'>Sensitive Skin</Link>
-                                    <Link to='/face-care?name=all'>All Skin Types</Link>
+                                    <h6>By Category</h6>
+                                    <Link to='/store/face-serum'>Serums</Link>
+                                    <Link to='/store/face-cleanser'>Cleansers</Link>
+                                    <Link to='/store/face-mask'>Masks</Link>
+                                    <Link to='/face-care'>Shop All</Link>
                                 </div>
                                 <div>
-                                    <Link to='/face-care' style={{color:'black'}}><h5>Shop all Face Care</h5></Link>
+                                    <Link to='/face-care' style={{color:'black'}}><h5>Shop All Face Care</h5></Link>
                                     <div className='nav-img'>    
                                         <img src='https://res.cloudinary.com/dgzbojudn/image/upload/v1633715170/cosmetics-products-advertising_1284-32872_ob8mp6.jpg' alt='ceramidin'/>
                                         <img src='https://res.cloudinary.com/dgzbojudn/image/upload/v1633715170/beige-color-make-up-cosmetics-set-with-cream_1268-15446_piq5jw.jpg' alt='cera'/>

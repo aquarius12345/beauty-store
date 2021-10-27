@@ -1,5 +1,5 @@
 .my-list {
-    height: 100vh;
+    width: 100vw;
 }
 
 .my-list ul {
@@ -7,8 +7,8 @@
     text-align: start;
     margin: 0 auto;
     padding: 20px;
-    margin-bottom: 20px;
-    background-color: rgb(236, 233, 233);
+    margin-bottom: 200px;
+    background-color: rgb(241, 241, 241);
 }
 
 .my-list img {
@@ -20,8 +20,7 @@
 .my-list h3 {
     margin-top: 30px;
     margin-bottom: 20px;
-    text-align: start;
-    margin-left: 300px;
+    text-align: center;
 }
 
 .my-list li {

@@ -5,7 +5,7 @@
     justify-content: space-evenly;
     padding-top: 50px;
     font-size: 0.9rem;
-    height: 80vh;
+    height: 70vh;
 }
 
 .signup h2 {
@@ -14,7 +14,7 @@
 }
 
 .signup form {
-    width: 40vw;
+    width: 37vw;
     height: 400px;
     display: flex;
     justify-content: space-around;
@@ -33,7 +33,7 @@
 
 .signup #signup-btn {
     width: 170px;
-    height: 40px;
+    height: 60px;
     margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 40px;
