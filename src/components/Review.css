@@ -90,7 +90,7 @@ h4 {
     justify-content: space-between;
     text-align: center;
     height: 40%;
-    width: 30vw;
+    width: 25vw;
     z-index: 912;
     top: 100;
     margin: 0 auto;
@@ -150,5 +150,12 @@ h4 {
     .review button {
         width: 110px;
         font-size: 00.8rem;
+    }
+
+    .go-login {
+        width: 80vw;
+        background-color: white;
+        opacity: 1;
+        box-shadow: 0 0 0.6em gray;  
     }
 }
