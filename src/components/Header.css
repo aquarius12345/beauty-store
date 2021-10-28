@@ -154,7 +154,8 @@
     background-color: red;
     color: white;
     position: absolute;
-    margin-left: 198px;
+    z-index: 998;
+    margin-left: 220px;
     margin-top: -5px;
 }
 
@@ -180,7 +181,7 @@
 
 /* -----Sidebar menu---- */
 .hamburguer {
-    opacity: 0;
+    display: none;
 }
 
 .icon {
@@ -205,6 +206,32 @@
     left: -100;
 }
 
+.bag {
+    position: relative;
+}
+
+/* --------Tablet Size------- */
+@media (min-width: 600px) and (max-width: 999px) {
+    .header {
+        padding: 0px 10px;
+        margin-top: 30px;
+    }
+
+    .bag .bag-qty {
+        right: 8%;
+        position: absolute;
+    }
+
+    .cart-menu {
+        margin-left: 48vw;
+        width: 45vw;
+        margin-top: 140px;
+    }
+
+    .subtotal {
+        margin-top: 20px;
+    }
+}
 
 /* ----------Mobile-------- */
 @media (max-width: 600px){
@@ -260,7 +287,7 @@
     }
 
     .bag-qty {
-        right: 30%;
+        right: 21%;
     }
 
     .cart-menu {

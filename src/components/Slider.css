@@ -97,6 +97,31 @@
   text-decoration: none;
 }
 
+/*--------- Tablet--------- */
+@media (min-width: 600px) and (max-width: 999px) {
+  .rec {
+    width: 65vw;
+  }
+
+  .slider-card {
+    width: 40%;
+  }
+
+  .slider-card img {
+    width: 90%;
+    height: 200px;
+    object-fit: contain;
+  }
+
+  .btn-right {
+    left: 80vw;
+  }
+
+  .btn-left {
+    left: 10vw;
+  }
+}
+
 
   /*----------- Mobile------------ */
   @media (max-width: 600px) {

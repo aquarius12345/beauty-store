@@ -97,6 +97,28 @@
     margin-left: -550px;
 }
 
+/* -------Tablet Size------- */
+@media (min-width: 650px) and (max-width: 999px) {
+    .navbar {
+        margin: 0;
+        padding: 10px 50px;
+    }
+
+    .dropdown-content {
+        width: 90vw;
+        height: 350px;
+    }
+
+    .dropdown-content img {
+        height: 150px;
+    }
+
+    #drop-face {
+        width: 90vw;
+        margin-left: -320px;
+    }
+}
+
 /* Mobile Size */
 @media (max-width: 600px) {
     

@@ -90,13 +90,15 @@ h4 {
     justify-content: space-between;
     text-align: center;
     height: 40%;
-    width: 25vw;
+    width: 30vw;
     z-index: 912;
     top: 100;
     margin: 0 auto;
+    margin-top: -300px;
     padding-top: 20px;
     border-radius: 5px;
     background-color: white;
+    box-shadow: 2px 2px 40px 200vw rgba(112, 111, 111, 0.76);
 }
 
 .go-login a {
@@ -105,9 +107,10 @@ h4 {
     text-decoration: none;
     font-size: 1rem;
     background-color: black;
-    padding: 12px 40px;
+    border-radius: 10px;
+    padding: 10px 30px;
     margin: 0 auto;
-    margin-bottom: 40px;
+    margin-bottom: 40px;    
 }
 
 .m .rev-container {
@@ -118,6 +121,17 @@ h4 {
     padding: 5%;
 }
 
+/* ---------Tablet-------- */
+@media (min-width: 600px) and (max-width: 999px) {
+    .m {
+        width: 50vw;
+        margin-top: -110%;
+        box-shadow: 2px 2px 40px 190vw rgba(112, 111, 111, 0.76);
+    }
+}
+
+
+/* ----------Mobile-------- */
 @media (max-width: 600px) {
     .m {
         width: 90vw;

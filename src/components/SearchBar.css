@@ -57,6 +57,14 @@
     background-color: rgb(241, 241, 245);
 }
 
+/* ------Tablet Size------- */
+@media (min-width: 650px) and (max-width: 999px) {
+    .search {
+        margin-right: 0;
+        margin-left: 20px;
+        width: 40vw;
+    }
+}
 
 /* ------Mobile-------- */
 @media (max-width: 600px){

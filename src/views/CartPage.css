@@ -111,6 +111,7 @@
         display: flex;
         flex-direction: column;
         width: 100vw;
+        margin-left: 10px;
     }
 
     .p-list p {

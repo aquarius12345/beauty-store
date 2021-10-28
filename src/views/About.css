@@ -40,6 +40,13 @@
     text-decoration: none;
 }
 
+
+@media (min-width: 650px) and (max-width: 999px) {
+    .about .bg {
+        width: 50%;
+    }
+}
+
 /*------- Mobile------ */
 @media (max-width: 600px) {
     .about p {

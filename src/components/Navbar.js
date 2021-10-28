@@ -22,7 +22,6 @@ const Navbar = () => {
                             <Link to='/store/body-soap'>Cleansers</Link>
                             <Link to='/store/body-scrub'>Body Scrubs</Link>
                             <Link to='/store/body-hand'>Handcreams</Link>
-                            <Link to='/bodycare'>Shop All</Link>
                          </div>
  
                          <div>

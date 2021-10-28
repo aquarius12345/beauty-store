@@ -49,6 +49,15 @@ article {
     background-color: rgba(243, 221, 124, 0.678);
 }
 
+/*--------- Tablet--------- */
+@media (min-width: 600px) and (max-width: 999px) {
+    .banner img {
+        width: 45vw;
+    }
+}
+
+
+/* ----------Mobile--------- */
 @media (max-width: 600px) {
     .banner-art {
         height: 10px;

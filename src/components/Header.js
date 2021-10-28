@@ -54,7 +54,7 @@ const Header = (props) => {
                     {cart.length ? <><button className='bag-qty' onClick={()=>handletoggle()}>{cart.map(el => el.qty).reduce((acc, curr) => acc + curr)}</button></>
                     : ''}
                     <li id='bag' className='h-icon' onClick={()=>handletoggle()}>
-                        <BsHandbag size='23' />   
+                        <BsHandbag size='23' className='bag'/>   
                     </li>
 
                     <li>{user && <Link to='/logout' className='h-icon'>Logout</Link>}</li>

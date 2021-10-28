@@ -73,6 +73,17 @@
     margin-bottom: 10%;
 }
 
+/* -----Tablet Size------- */
+@media (min-width: 650px) and (max-width: 999px) {
+    .filter-list {
+        width: 20vw;
+    }
+
+    #showall-card img {
+        width: 100%;
+        height: 150px;
+    }
+}
 
 /* -------Mobile-------- */
 @media (max-width: 600px)  {
