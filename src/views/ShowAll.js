@@ -9,11 +9,8 @@ import './ShowAll.css';
 const ShowAll = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(false);
-    // const { name } = props.match.params;
-    // console.log('name', name);
 
     useEffect(() => {
-       //console.log('inside use effect')
        getAll()
     }, [])
 

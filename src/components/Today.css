@@ -16,3 +16,10 @@
     margin-left: 10px;
 }
 
+/* ------Moblie----- */
+@media (max-width: 600px) {
+    .today-bg span {
+        font-size: 0.6rem;
+    }
+}
+

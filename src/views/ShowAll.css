@@ -50,3 +50,50 @@
 .prd-card .the-p {
     font-weight: normal;
 }
+
+
+/* --------Mobile------- */
+@media (max-width: 600px) {
+    #showall-card img {
+        width: 120px;
+        height: 150px;
+        object-fit: contain;
+    }
+
+    #showall-card {
+        width: 45%;
+        height: 50%;
+        font-size: 0.9rem;
+        box-shadow: none;
+    }
+
+    .the-ul {
+        width: 100vw;
+    }
+
+    .prd-card {
+        height: 250px;
+        margin-right: 10px; 
+    }
+
+    .showall h3 {
+        font-size: 1.2rem;
+        margin-top: 30px;
+    }
+
+    .result p {
+        font-size: 0.8rem;
+        margin-left: -20px;
+    }
+
+    .prd-card .the-p {
+        font-size: 0.7rem;
+        text-align: center;
+        width: 100%;
+        height: 55px;
+    }
+
+    .prd-card div {
+        height: 110px;
+    }
+}

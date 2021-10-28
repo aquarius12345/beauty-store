@@ -74,7 +74,8 @@ const Review = (props) => {
                     </li>)}
                   </ul>) : null}
                   
-                <div  className={ mod ? 'dark' : '' }>
+                {/* <div  className={ mod ? 'dark' : '' }> */}
+                <div>
                     {!mod ? '' : ( <>
                     {token ? (<>
                         <form className='m' onSubmit={handleSubmit}>

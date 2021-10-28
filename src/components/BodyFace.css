@@ -58,6 +58,21 @@
     font-weight: normal;
 }
 
+/* -------Mobile-------- */
+@media (max-width: 600px) {
+    .prd-card img {
+        width: 110px;
+        height: 130px;
+        object-fit: contain;
+    }
+
+    .prd-card {
+        width: 45%;
+        height: 255px;
+        margin-right: 10px; 
+        margin-bottom: 15px;
+    }
+}
 
 
 

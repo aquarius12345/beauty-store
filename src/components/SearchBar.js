@@ -12,7 +12,6 @@ const SearchBar = () => {
     const [isOpen, setIsOpen] = useState(true);
 
     //const ref = useRef();
-
     const handleChange = (e) => {
         setInputValue(e.target.value);
     };
@@ -34,7 +33,6 @@ const SearchBar = () => {
     useEffect(() => {
         const filtered = products.filter(el => el.name.toLowerCase().includes(inputValue.toLowerCase()));
         setFilteredList(filtered);
-
     }, [inputValue]);
 
     let menuRef = useRef()
@@ -46,7 +44,6 @@ const SearchBar = () => {
             }
         };
         document.addEventListener('mousedown', handler);
-
         return () => {
             document.removeEventListener('mousedown', handler);
         };

@@ -1,6 +1,6 @@
-.caroussel {
-    width: 80vw;
-    margin: 0 auto;
+.carousel {
+    width: 100vw;
+    margin: 35px auto 0px;
 }
 
 .caroussel img {
@@ -14,12 +14,21 @@
     font-size: 1.2em;
 }
 
+.carousel-indicators {
+    opacity: 0;
+}
+
+/* ----------Mobile---------- */
 @media (max-width: 600px) {
     .caroussel {
         width: 100vw;
         margin-top: -200px;
         padding-top: 20px;
     };
+
+    .carousel-indicators {
+        opacity: 0;
+    }
    
 };
 

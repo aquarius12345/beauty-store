@@ -105,5 +105,39 @@
     width: 50px;
 }
 
+/* ------Mobile------- */
+@media (max-width: 600px) {
+    .cartpage-container {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    .p-list p {
+        font-size: 0.8rem;
+    }
+
+    .cart-page {
+        width: 89%;
+        padding: 0;
+    }
+
+    .sub-container {
+        width: 80%;
+        height: 250px;
+        margin-left: 20px;
+        font-size: 0.8rem;
+    }
+
+    .cart-first h4 {
+        margin-top: 30px;
+    }
+
+    .p-list span {
+        font-size: 0.75rem;
+    }
+
+}
+
 
 

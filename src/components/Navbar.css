@@ -101,14 +101,11 @@
 @media (max-width: 600px) {
     
     .nav-container {
-        box-sizing: border-box;
-        width: 100vw;
-        font-size: 5px;
-        opacity: 0;
+        display: none;
     }
     
     .navbar {
-        opacity: 0;   
+        display: none;
     }
     
     .dropdown-content {

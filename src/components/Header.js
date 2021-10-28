@@ -67,7 +67,7 @@ const Header = (props) => {
             <div className={sidebar ? 'nav-menu active' : 'nav-menu'} >
                 <ul className='nav-menu-items' onClick={()=>setSidebar(!sidebar)}>
                     <li className='navbar-toggle'>
-                        <AiOutlineClose size='10'/>
+                        <AiOutlineClose size='10' id='close-side'/>
                     </li>
                     <h4 style={{marginTop: '30px'}}><Link to='/'>BEAUTYSTORE</Link></h4>
                     <li style={{marginTop: '50px'}}><Link to='/store/best-sellers'>Best Sellers</Link></li>

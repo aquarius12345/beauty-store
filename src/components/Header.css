@@ -61,6 +61,7 @@
     color: pink;
 }
 
+/* --------Cart Menu------- */
 .cart-menu {
     display: flex;
     flex-direction: column;
@@ -196,7 +197,8 @@
     left: -100%;
     transition: 850ms;
     z-index: 959;
-    background-color: rgb(243, 243, 243);
+    background-color: whitesmoke;
+    box-shadow: 0 0 10px 1px lightgray;
 }
 
 .nav-menu.active {
@@ -209,13 +211,13 @@
     .header {
         font-size: 0.8rem;
         height: 150px; 
-        background-color: aliceblue;
     }
 
     .header h3 {
-        font-size: 1rem;
+        font-size: 1.2rem;
         margin-left: 10px;
         margin-top: -70px;
+        margin-bottom: 10px;
     }
 
     .hamburguer {
@@ -232,6 +234,7 @@
         left: 0;
         transition: 350ms;
         height: 100%;
+        font-size: 1rem;
     }
 
     .nav-menu-items li {
@@ -251,6 +254,20 @@
     .navbar-toggle {
         margin-left: 160px;
     }
+
+    #close-side {
+        margin-left: 35px;
+    }
+
+    .bag-qty {
+        right: 30%;
+    }
+
+    .cart-menu {
+        left: -60%;
+        width: 90%;
+    }
+
 }
 
 

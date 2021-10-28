@@ -74,3 +74,29 @@
     background-color: white;
     border: 1px solid lightgray;
 }
+
+
+/* ----------Mobile--------- */
+@media (max-width: 600px) {
+    .the-ul {
+        width: 100vw;
+    }
+    
+    .my-list ul {
+        width: 100vw;
+    }
+    
+    .my-list li {
+        font-size: 0.7rem;
+        height: 150px;
+    }
+
+    .desc-btn button {
+        font-size: 0.6rem;
+    }
+
+    .my-list h3 {
+        margin-top: 30px;
+        font-size: 1.3rem;
+    }
+};

@@ -67,5 +67,35 @@
     opacity: 0.5;
 }
 
+@media (max-width: 600px) {
+    .signup {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .signup form {
+        width: 80%;
+        height: 60%;
+        margin: 5px auto 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 0.8rem;
+    }
+
+    .signup h2 {
+        font-size: 1.2rem;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .signup input {
+        width: 80%;
+        margin: 2px auto;
+    }
+}
+
 
 

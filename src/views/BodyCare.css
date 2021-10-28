@@ -74,5 +74,13 @@
 }
 
 
+/* -------Mobile-------- */
+@media (max-width: 600px)  {
+   .filter {
+       opacity: 1;
+       position: absolute;
+       left: -100%;  
+   }
+}
 
 
