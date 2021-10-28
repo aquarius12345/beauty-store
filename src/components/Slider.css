@@ -1,5 +1,5 @@
 .slider-card {
-  width: 12vw;
+  width: 11vw;
   height: 280px;
   margin-top: 5px;
   margin-left: 2px;
@@ -34,7 +34,7 @@
 }
 
 .rec {
-  width: 58vw;
+  width: 59vw;
   height: 300px;
   overflow-x: scroll;
   scroll-behavior: smooth;
@@ -97,14 +97,19 @@
   text-decoration: none;
 }
 
-/*--------- Tablet--------- */
+/*----------- Tablet----------- */
 @media (min-width: 600px) and (max-width: 999px) {
   .rec {
     width: 65vw;
   }
 
+  .slider h2 {
+    margin-top: -5px;
+    margin-bottom:20px;
+  }
+
   .slider-card {
-    width: 40%;
+    width: 31%;
   }
 
   .slider-card img {
@@ -141,6 +146,7 @@
       width: 55vw;
       height: 330px; 
       margin-top: -20px;
+      margin-left: 55px;
       margin-bottom: 10px;
     }
 
@@ -149,7 +155,7 @@
       height: 280px;
       margin: 0 5px;
       margin-top: 0;
-      margin-left: 35px;
+      margin-left: 52px;
       padding: 0;
       box-shadow: none;
     }

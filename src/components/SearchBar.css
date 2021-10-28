@@ -64,6 +64,10 @@
         margin-left: 20px;
         width: 40vw;
     }
+
+    .search ul {
+        font-size: 0.7rem;
+    }
 }
 
 /* ------Mobile-------- */

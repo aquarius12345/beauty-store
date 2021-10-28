@@ -199,7 +199,7 @@
     transition: 850ms;
     z-index: 959;
     background-color: whitesmoke;
-    box-shadow: 0 0 10px 1px lightgray;
+    box-shadow: 0 0 10px 1px rgb(156, 156, 156);
 }
 
 .nav-menu.active {
@@ -214,12 +214,11 @@
 @media (min-width: 600px) and (max-width: 999px) {
     .header {
         padding: 0px 10px;
-        margin-top: 30px;
+        margin: 20px 0;
     }
 
-    .bag .bag-qty {
-        right: 8%;
-        position: absolute;
+    .bag-qty {
+        margin-left: 175px;
     }
 
     .cart-menu {
@@ -249,6 +248,7 @@
 
     .hamburguer {
         opacity: 1;
+        display: flex;
         margin-right: 10px;
     }
 
@@ -287,7 +287,7 @@
     }
 
     .bag-qty {
-        right: 21%;
+        right: 30%;
     }
 
     .cart-menu {

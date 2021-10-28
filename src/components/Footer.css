@@ -16,6 +16,13 @@
     margin-bottom: 5px;
 }
 
+/* -------Tablet------- */
+@media (min-width: 600px) and (max-width: 999px) {
+    .footer {
+        font-size: 0.8rem;
+    }
+}
+
 /* ------Mobile-------- */
 @media (max-width: 600px) {
     .footer {

@@ -60,7 +60,7 @@ const SearchBar = () => {
                     {inputValue !== '' ? filteredList.slice(0, 7).map(el => 
                     <li key={el._id}>
                         <img src={el.image_one} alt='product'/>
-                        <Link to={`/product-detail/${el._id}`}>{el.name.slice(0, 40)}...</Link>
+                        <Link to={`/product-detail/${el._id}`} onClick={()=>setIsOpen(!isOpen)}>{el.name.slice(0, 40)}...</Link>
                     </li>): null}
                     </ul>
                 )}
