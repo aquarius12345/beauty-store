@@ -123,7 +123,7 @@ const Header = (props) => {
                 ) : 
                 (<>
                     <p style={{margin: '0 auto'}}>Please Login to add in Cart</p>
-                    <Link to='/signup' className='sign-btn'>Sign In</Link>
+                    <Link to='/signup' className='sign-btn' onClick={()=>handletoggle()}>Sign In</Link>
                 </>)}
                          
             </div>

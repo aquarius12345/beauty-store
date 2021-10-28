@@ -65,7 +65,7 @@ const Signup = () => {
                     <button id='signup-btn' type='submit'>Create Account</button>    
                 </form>
 
-                <form onSubmit={loginSubmit}>
+                <form onSubmit={loginSubmit} className="last">
                     <h2>Login</h2>
                     <p>Welcome back! Login into your account here:</p>
                     <input type='email' placeholder='Email adress' name='email' onChange={handleLoginInput}/>

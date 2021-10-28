@@ -79,7 +79,7 @@ const Review = (props) => {
                     {!mod ? '' : ( <>
                     {token ? (<>
                         <form className='m' onSubmit={handleSubmit}>
-                            <RiCloseFill style={{margin: '1% 95%'}} onClick={toggle}/>
+                            <RiCloseFill style={{margin: '2% 92%'}} onClick={toggle}/>
                             <div className='rev-container'>
                                 <h5 style={{fontWeight: 'bold'}}>Please share your experience</h5>
                                 <p>Your feedback will help other shoppers make good choices, and we'll use it to improve our products.</p>

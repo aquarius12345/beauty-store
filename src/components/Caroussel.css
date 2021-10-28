@@ -1,6 +1,6 @@
 .carousel {
     width: 100vw;
-    margin: 35px auto 0px;
+    margin: 45px auto 0px;
 }
 
 .caroussel img {
@@ -16,6 +16,7 @@
 
 .carousel-indicators {
     opacity: 0;
+    display: none;
 }
 
 /* ----------Mobile---------- */

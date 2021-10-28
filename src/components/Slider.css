@@ -118,6 +118,10 @@
     object-fit: contain;
   }
 
+  .slider-buttons {
+    margin-top: -200px;
+  }
+
   .btn-right {
     left: 80vw;
   }
@@ -162,17 +166,19 @@
 
     .slider-card img {
       width: 150px;
-      height: 300px;
+      height: 280px;
       margin-top: 0;
       object-fit: contain;
     }
 
     .btn-right {
       margin-left: -20px;
+      width: 40px;
     }
 
     .btn-left {
       margin-left: -30px;
+      width: 40px;
     }
 
     .slider-card h6 {
