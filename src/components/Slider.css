@@ -172,15 +172,17 @@
     }
 
     .btn-right {
-      margin-left: -20px;
+      margin-left: -10px;
       width: 40px;
       box-shadow: none;
+      background: transparent;
     }
 
     .btn-left {
       margin-left: -30px;
       width: 40px;
       box-shadow: none;
+      background: transparent;
     }
 
     .slider-card h6 {

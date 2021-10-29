@@ -100,4 +100,8 @@
     .prd-card div {
         height: 110px;
     }
+
+    .prd-card .rating-hearts {
+        display: none;
+    }
 }
