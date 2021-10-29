@@ -71,19 +71,6 @@ h4 {
     margin-left: 90%;
 }
 
-/* .dark {
-    width: 107vw;
-    height: 190vh;
-    display: flex;
-    background-color: rgba(117, 116, 116, 0.5);
-    margin-top: -1350px;
-    margin-left: -300px;
-    margin-bottom: 0;
-    padding-top: 700px;
-    position: absolute;
-    z-index: 905;
-} */
-
 .go-login {
     display: flex;
     flex-direction: column;
@@ -107,7 +94,7 @@ h4 {
     text-decoration: none;
     font-size: 1rem;
     background-color: black;
-    border-radius: 10px;
+    border-radius: 35px;
     padding: 10px 30px;
     margin: 0 auto;
     margin-bottom: 40px;  

@@ -5,7 +5,7 @@ import { AiOutlineLinkedin } from 'react-icons/ai';
 const About = () => {
     return (
         <div className='about'>
-            <img src='https://res.cloudinary.com/dgzbojudn/image/upload/v1634747439/5733dd35-8ad1-4909-b083-b8952571d859_vqymql.jpg' alt='debora'/>
+            <img src='https://res.cloudinary.com/dgzbojudn/image/upload/v1635527919/IMG_7077_ib5pea.jpg' alt='debora'/>
             <div className='bg'>
                 <h5>Debora Seo</h5>
                 <h6>Full Stack Web Developer</h6>

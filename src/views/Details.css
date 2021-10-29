@@ -191,5 +191,13 @@
     .highlights li {
         margin-bottom: 5px;
     }
+
+    .highlights img {
+        width: 50px;
+    }
+
+    .d-rating {
+        display: none;
+    }
     
 }

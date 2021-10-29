@@ -83,7 +83,7 @@ const Details = (props) => {
                 <div className='description-d'>
                     <h3>{product.brand}</h3>
                     <h6>{product.name}</h6>
-                    <span>{rating(product.rating)} {product.rating + '.0'}</span>
+                    <span className='d-rating'>{rating(product.rating)} {product.rating + '.0'}</span>
                     <p style={{fontWeight:'bold'}}>${product.price / 100 + '.00'}</p>
                     <p>{product.description}</p> 
                     <p style={{fontWeight:'bold'}}>Skin type: {product.skin_type}</p>
