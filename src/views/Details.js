@@ -15,12 +15,10 @@ const Details = (props) => {
         const result = await api.get(`/product/${props.match.params.id}`);
         //console.log('result oneProduct', result.data) 
         setProduct(result.data);
-        // setIsFavorite(checkIfIsFavorite());
     };
 
     useEffect(() => {
        oneProduct();
-       //console.log('use effect in details*******');
     }, [,props.match.params.id, qty, props.list]);
 
     useEffect(() => {
