@@ -160,6 +160,7 @@
 @media (max-width: 600px) {
     .det-container .img-size {
         width: 180px;
+        margin-left: 80px;
     }
 
     .det-container {
