@@ -24,8 +24,9 @@ const CartPage = (props) => {
     };
 
     const handleQty = async(el, e) => {
-        const qty = e.target.value
-        console.log('cart input value', qty);
+        const qty = parseInt(e.target.value);
+        //console.log('qty parseInt', typeof qty);
+        
         try {
             await api.put(`/cart/${el}`, {qty});
             props.getCart();

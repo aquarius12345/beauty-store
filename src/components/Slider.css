@@ -174,11 +174,13 @@
     .btn-right {
       margin-left: -20px;
       width: 40px;
+      box-shadow: none;
     }
 
     .btn-left {
       margin-left: -30px;
       width: 40px;
+      box-shadow: none;
     }
 
     .slider-card h6 {

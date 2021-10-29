@@ -7,7 +7,7 @@ import Review from '../components/Review';
 const Details = (props) => {
     //console.log('details props', props)
     const [product, setProduct] = useState({});
-    const [qty, setQty] = useState('1');
+    const [qty, setQty] = useState(1);
     const [toggleImg, setToggleImg] = useState(false);
     const [isFavorite, setIsFavorite] = useState(false);
 
@@ -37,7 +37,9 @@ const Details = (props) => {
 
     const handleInput = (e) => {
         e.preventDefault();
-        setQty(e.target.value);
+        // setQty(e.target.value);
+        const newqty = parseInt(e.target.value);
+        setQty(newqty);
     };
 
     const addToCart = async(el) => {
@@ -52,8 +54,7 @@ const Details = (props) => {
 
     const checkIfIsFavorite = () => {
         const filtered = props.list.filter(el => el._id === props.match.params.id);
-        //console.log('list inside check', props.list);
-        //console.log('filtered.length', filtered.length > 0);
+     
         if(filtered.length > 0) {
             return true;
         }

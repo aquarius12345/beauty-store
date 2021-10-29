@@ -6,9 +6,10 @@
 }
 
 .det-container .img-size {
-    width: 300px;
+    width: 280px;
     height: 30%;
     object-fit: contain;
+    margin-left: 10px;
 }
 
 .det-container {
