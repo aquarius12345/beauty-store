@@ -1,6 +1,6 @@
 .carousel {
     width: 100vw;
-    margin: 45px auto 0px;
+    margin: 0 auto;
 }
 
 .caroussel img {
@@ -23,7 +23,7 @@
 @media (max-width: 600px) {
     .caroussel {
         width: 100vw;
-        margin-top: -160px;
+        margin-top: -130px;
         padding-top: 20px;
     };
 
