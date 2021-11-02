@@ -38,6 +38,7 @@
     height: 350px;
     box-shadow: 0 0 0.3em rgb(144, 150, 156);
     margin-bottom: 15px;
+    margin-right: 10px;
     font-size: 0.9rem;
     box-sizing: border-box;
     padding-bottom: 20px;
@@ -53,6 +54,11 @@
 
 .result p {
     font-size: 1rem;
+}
+
+.products-part .the-ul {
+    display: flex;
+    justify-content: flex-start;
 }
 
 
