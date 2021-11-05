@@ -1,3 +1,9 @@
+# Link of the Backend Code:
+https://github.com/aquarius12345/beauty-store-app
+
+# Link of Deploy:
+https://beautystoreon.herokuapp.com/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
