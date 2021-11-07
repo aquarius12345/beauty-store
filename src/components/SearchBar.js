@@ -14,6 +14,7 @@ const SearchBar = () => {
     //const ref = useRef();
     const handleChange = (e) => {
         setInputValue(e.target.value);
+        setIsOpen(false);
     };
 
     useEffect(() => {
@@ -54,7 +55,7 @@ const SearchBar = () => {
         <div>
             <div className='search' ref={menuRef}>
                 <AiOutlineSearch size='22' className='search-icon'/>
-                <input type='search' value={inputValue} placeholder='Search' onChange={handleChange} onClick={()=>setIsOpen(!isOpen)}/>
+                <input type='search' value={inputValue} placeholder='Search' onChange={handleChange} />
                 {isOpen ? '' :
                 (
                     <ul>
