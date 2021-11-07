@@ -39,15 +39,16 @@ const SearchBar = () => {
 
     useEffect(() => {
         let handler = (event) => {
-            if(!menuRef.current.contains(event.target)) {
-                setIsOpen(true);
+            if(menuRef.current.contains(event.target)) {
+                return;
             }
+            setIsOpen(true);
         };
-        document.addEventListener('mousedown', handler);
+        document.body.addEventListener('click', handler, { capture: true });
         return () => {
-            document.removeEventListener('mousedown', handler);
+            document.body.removeEventListener('click', handler, { capture: true });
         };
-    });
+    }, []);
 
     return ( 
         <div>
