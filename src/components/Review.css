@@ -78,7 +78,7 @@ h4 {
     text-align: center;
     height: 40%;
     width: 25vw;
-    z-index: 990;
+    z-index: 999;
     top: 100;
     margin: 0 auto;
     margin-top: -300px;

@@ -53,7 +53,11 @@ const BodyCare = () => {
                      <li>
                          <div className='list'>
                              <Link to="#">By Skin Type</Link>
-                             <button onClick={() => handleButton('btnOne', button.btnOne)}>+</button>
+                             {/* <button onClick={() => handleButton('btnOne', button.btnOne)}>+</button> */}
+                             <div className={button.btnOne ? 'menu-toggle active': 'menu-toggle'} onClick={() => handleButton('btnOne', button.btnOne)}>
+                                <span></span>
+                                <span></span>
+                             </div> 
                          </div>
                          {!button.btnOne ? '' : 
                              <ul>
@@ -69,7 +73,11 @@ const BodyCare = () => {
                      <li>
                          <div className='list'>
                              <Link to="#">By Brand</Link>
-                             <button onClick={() => handleButton('btnTwo', button.btnTwo)}>+</button>
+                             {/* <button onClick={() => handleButton('btnTwo', button.btnTwo)}>+</button> */}
+                             <div className={button.btnTwo ? 'menu-toggle active': 'menu-toggle'} onClick={() => handleButton('btnTwo', button.btnTwo)}>
+                                <span></span>
+                                <span></span>
+                             </div> 
                          </div>
                          {!button.btnTwo ? '' : 
                              <ul>
@@ -82,7 +90,11 @@ const BodyCare = () => {
                      <li>
                          <div className='list'>
                              <Link to="#"> By Rating</Link>
-                             <button onClick={() => handleButton('btnThree', button.btnThree)}>+</button>
+                             {/* <button onClick={() => handleButton('btnThree', button.btnThree)}>+</button> */}
+                             <div className={button.btnThree ? 'menu-toggle active': 'menu-toggle'} onClick={() => handleButton('btnThree', button.btnThree)}>
+                                <span></span>
+                                <span></span>
+                             </div> 
                          </div>
                          {!button.btnThree ? '' : 
                          <ul className='rating-check'>
